@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Bautizo y Cumpleaños - Derek Joao Chavez de la Cruz</title>
+  <meta name="description" content="Invitación web para el Bautizo y Cumpleaños de Derek Joao Chavez de la Cruz. Acompáñanos este 29 de Agosto de 2026.">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🕊️</text></svg>">
+
+  <!-- Google Fonts: Caligrafía lujosa, Serif clásica y Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Petales Flotantes en Fondo -->
+  <div class="petals-container" id="petalsContainer" aria-hidden="true"></div>
+
+  <!-- ========================================== -->
+  <!-- SOBRE INTERACTIVO DE APERTURA (ENVELOPE)   -->
+  <!-- ========================================== -->
+  <div class="envelope-overlay" id="envelopeOverlay">
+    <div class="envelope-wrapper" id="envelopeWrapper">
+      <div class="envelope" id="envelope">
+        <!-- Solapa Superior -->
+        <div class="flap top-flap"></div>
+        
+        <!-- Solapas Laterales e Inferior -->
+        <div class="pocket"></div>
+
+        <!-- Tarjeta Sobresaliente -->
+        <div class="card-preview">
+          <div class="card-preview-inner">
+            <span class="preview-dove">🕊️</span>
+            <p class="preview-title">Mi Bautizo</p>
+            <p class="preview-name">Derek Joao</p>
+          </div>
+        </div>
+
+        <!-- Sello de Lacre Dorado Interactivo -->
+        <div class="wax-seal-container" id="waxSeal">
+          <img src="assets/images/wax-seal.png" alt="Sello de Lacre Dorado" class="seal-img">
+          <div class="seal-glow"></div>
+          <span class="seal-prompt">Haz clic para abrir</span>
+        </div>
+      </div>
+      <p class="envelope-instruction">Haz clic en el sello dorado para abrir la invitación</p>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- BARRA DE NAVEGACIÓN SUPERIOR (NAVBAR)      -->
+  <!-- ========================================== -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#inicio" class="nav-brand">
+        <svg class="nav-dove-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M12 3C10.5 5 9.5 8 9.5 11C9.5 14.5 12 16.5 12 16.5C12 16.5 14.5 14.5 14.5 11C14.5 8 13.5 5 12 3Z" fill="#D4AF37"/>
+          <path d="M12 3C8 4.5 4 7 3 11C2.5 13 3 15 4.5 16.5C6.5 18.5 9.5 17 12 16.5" stroke="#D4AF37"/>
+          <path d="M12 3C16 4.5 20 7 21 11C21.5 13 21 15 19.5 16.5C17.5 18.5 14.5 17 12 16.5" stroke="#D4AF37"/>
+        </svg>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#inicio" class="nav-link active">Inicio</a>
+        <a href="#detalles" class="nav-link">Detalles</a>
+        <a href="#galeria" class="nav-link">Galería</a>
+        <a href="#confirmar" class="nav-link nav-btn-highlight">Confirmar</a>
+      </nav>
+
+      <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ========================================== -->
+  <!-- CONTENEDOR DE TARJETA ÚNICA CONTINUA       -->
+  <!-- ========================================== -->
+  <main class="main-wrapper">
+    <article class="single-invitation-card" id="inicio">
+      
+      <!-- Adornos Florales de Esquinas Superiores -->
+      <img src="assets/images/floral-corner.png" alt="Flores" class="floral-corner top-left">
+      <img src="assets/images/floral-corner.png" alt="Flores" class="floral-corner top-right">
+
+      <!-- ================= SECCIÓN 1: PORTADA ================= -->
+      <div class="card-section section-header">
+        <!-- Paloma Dorada con Destellos -->
+        <div class="header-emblem">
+          <div class="rays-bg"></div>
+          <svg class="dove-svg" viewBox="0 0 100 80" fill="none">
+            <circle cx="50" cy="40" r="32" stroke="url(#goldGradient)" stroke-width="1" stroke-dasharray="3 3" opacity="0.6"/>
+            <path d="M50 15 C40 25, 25 25, 15 35 C10 40, 15 48, 25 45 C35 42, 45 46, 50 60 C55 46, 65 42, 75 45 C85 48, 90 40, 85 35 C75 25, 60 25, 50 15 Z" fill="url(#goldGradient)"/>
+            <path d="M50 20 C46 15, 38 16, 35 14 M36 15 C34 12, 30 14, 32 17" stroke="#A78B38" stroke-width="1.5" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#F3E5AB" />
+                <stop offset="50%" stop-color="#D4AF37" />
+                <stop offset="100%" stop-color="#AA771C" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        <!-- Títulos de la Invitación -->
+        <h1 class="main-title cursive-gold">Mi Bautizo</h1>
+        <h2 class="sub-title serif-brown">y Cumpleaños</h2>
+
+        <!-- Separador de Hoja y Corazón Dorado -->
+        <div class="gold-divider">
+          <span class="leaf-branch left"></span>
+          <span class="heart-icon">♥</span>
+          <span class="leaf-branch right"></span>
+        </div>
+
+        <!-- Marco Ovalado con Retrato de Derek Joao -->
+        <div class="portrait-container">
+          <div class="oval-frame-wrapper">
+            <svg class="wreath-border" viewBox="0 0 200 240" fill="none">
+              <ellipse cx="100" cy="120" rx="90" ry="110" stroke="url(#goldGradient)" stroke-width="2.5"/>
+              <ellipse cx="100" cy="120" rx="95" ry="115" stroke="url(#goldGradient)" stroke-width="1" stroke-dasharray="4 4" opacity="0.7"/>
+              <path d="M15 120 C10 100, 20 80, 40 60 C30 75, 28 95, 30 115" stroke="url(#goldGradient)" stroke-width="2" fill="none"/>
+              <path d="M185 120 C190 100, 180 80, 160 60 C170 75, 172 95, 170 115" stroke="url(#goldGradient)" stroke-width="2" fill="none"/>
+            </svg>
+            <div class="photo-clip">
+              <img src="assets/images/baby-derek-main.png" alt="Derek Joao Chavez de la Cruz" class="baby-photo">
+            </div>
+            <!-- Flores en la Base del Marco Ovalado -->
+            <img src="assets/images/floral-base.png" alt="Flores base" class="floral-base-overlay">
+          </div>
+        </div>
+
+        <!-- Banner / Ribbon de Pergamino con el Nombre -->
+        <div class="name-ribbon">
+          <div class="ribbon-content">
+            <h3 class="baby-name-first">DEREK JOAO</h3>
+            <h4 class="baby-name-last">CHAVEZ DE LA CRUZ</h4>
+          </div>
+        </div>
+
+        <!-- Frase Espiritual y Conmovedora -->
+        <blockquote class="spiritual-quote">
+          “Jesús hoy me presento ante ti,<br>
+          para ser bañado por la gracia<br>
+          de tu amor.”
+        </blockquote>
+
+        <!-- Cruz Dorada Elegante -->
+        <div class="cross-emblem">
+          <svg class="cross-svg" viewBox="0 0 40 60" fill="none">
+            <path d="M20 0 V60 M5 18 H35" stroke="url(#goldGradient)" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="20" cy="18" r="3" fill="#D4AF37"/>
+          </svg>
+        </div>
+      </div>
+
+
+      <!-- ================= SECCIÓN 2: DETALLES Y BAUTIZO ================= -->
+      <div class="card-section section-details" id="detalles">
+        
+        <!-- Mensaje de Encabezado -->
+        <p class="welcome-heading serif-brown">Acompáñanos en este día<br>tan especial</p>
+        
+        <!-- Separador Dorado -->
+        <div class="gold-divider mini-divider">
+          <span class="leaf-branch left"></span>
+          <span class="heart-icon">♥</span>
+          <span class="leaf-branch right"></span>
+        </div>
+
+        <!-- Título Bautizo -->
+        <h2 class="section-title cursive-gold">Bautizo</h2>
+        
+        <div class="mini-dove-container">
+          <span class="mini-dove">🕊️</span>
+        </div>
+
+        <!-- TARJETA DE DETALLES DEL EVENTO -->
+        <div class="details-card">
+          <div class="details-top-grid">
+            
+            <!-- Icono de Iglesia Centrado -->
+            <div class="church-icon-box">
+              <svg class="church-svg" viewBox="0 0 80 100" fill="none">
+                <rect x="25" y="45" width="30" height="45" rx="2" stroke="#8C5638" stroke-width="1.8" fill="#FBF7EE"/>
+                <path d="M20 45 L40 25 L60 45 Z" stroke="#8C5638" stroke-width="1.8" fill="#F5EADB"/>
+                <rect x="33" y="15" width="14" height="30" stroke="#8C5638" stroke-width="1.8" fill="#FBF7EE"/>
+                <path d="M30 15 L40 5 L50 15 Z" fill="#D4AF37"/>
+                <path d="M40 0 V6 M37 3 H43" stroke="#8C5638" stroke-width="1.5"/>
+                <path d="M34 90 V70 C34 65, 46 65, 46 70 V90 Z" fill="#8C5638"/>
+                <circle cx="40" cy="30" r="4" stroke="#8C5638" stroke-width="1.2" fill="#FAF3E0"/>
+              </svg>
+            </div>
+
+            <!-- Información de Fecha, Hora y Lugar -->
+            <div class="event-info-list">
+              <!-- Fecha -->
+              <div class="info-item">
+                <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="#8C5638" stroke-width="1.8">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <span class="info-text bold-date">29 / 08 / 2026</span>
+              </div>
+
+              <!-- Hora -->
+              <div class="info-item">
+                <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="#8C5638" stroke-width="1.8">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 16 14"></polyline>
+                </svg>
+                <span class="info-text">2:30 P.M.</span>
+              </div>
+
+              <!-- Lugar -->
+              <div class="info-item location-item">
+                <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="#8C5638" stroke-width="1.8">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <div class="location-details">
+                  <strong>PARROQUIA<br>NUESTRA SEÑORA<br>DEL CARMEN</strong>
+                  <span class="district">MIRAFLORES</span>
+                  <button class="btn-location-interactive" id="openLocationModalBtn">
+                    <span class="btn-location-icon">📍</span>
+                    <span>Ver Ubicación e Itinerario</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CONTADOR REGRESIVO INTEGRADO -->
+          <div class="countdown-section">
+            <p class="countdown-label">Faltan para este gran día:</p>
+            <div class="timer-grid" id="timerGrid">
+              <div class="timer-box"><span id="days">00</span><small>Días</small></div>
+              <div class="timer-box"><span id="hours">00</span><small>Horas</small></div>
+              <div class="timer-box"><span id="minutes">00</span><small>Min</small></div>
+              <div class="timer-box"><span id="seconds">00</span><small>Seg</small></div>
+            </div>
+          </div>
+
+          <!-- Línea Punteada Separadora -->
+          <div class="dotted-divider"></div>
+
+          <!-- SECCIÓN PADRES -->
+          <div class="family-block">
+            <h3 class="cursive-gold family-title">Padres</h3>
+            <div class="heart-mini">♥</div>
+            <p class="family-names">
+              GILBER CHAVEZ<br>
+              CRISS DE LA CRUZ
+            </p>
+          </div>
+
+          <!-- SECCIÓN PADRINOS -->
+          <div class="family-block">
+            <h3 class="cursive-gold family-title">Padrinos</h3>
+            <div class="heart-mini">♥</div>
+            <p class="family-names">
+              JOSELITO SANCHEZ MACHADO<br>
+              BEYTIA LLACTAHUAMANI ESPINOZA
+            </p>
+          </div>
+        </div>
+
+        <!-- SECCIÓN DE GALERÍA DE FOTOS -->
+        <div class="gallery-section" id="galeria">
+          <div class="gold-divider inline-divider">
+            <span class="leaf-branch left"></span>
+            <h3 class="gallery-heading serif-brown">Galería</h3>
+            <span class="leaf-branch right"></span>
+          </div>
+
+          <!-- Carrusel Interactivo de Fotos -->
+          <div class="carousel-container">
+            <button class="carousel-arrow prev" id="prevSlideBtn" aria-label="Imagen anterior">‹</button>
+            
+            <div class="carousel-viewport">
+              <div class="carousel-slides" id="carouselSlides">
+                <div class="slide active">
+                  <img src="assets/images/baby-derek-1.png" alt="Derek Foto 1" class="gallery-img">
+                </div>
+                <div class="slide">
+                  <img src="assets/images/baby-derek-2.png" alt="Derek Foto 2" class="gallery-img">
+                </div>
+                <div class="slide">
+                  <img src="assets/images/baby-derek-3.png" alt="Derek Foto 3" class="gallery-img">
+                </div>
+              </div>
+            </div>
+
+            <button class="carousel-arrow next" id="nextSlideBtn" aria-label="Imagen siguiente">›</button>
+          </div>
+
+          <!-- Puntos de Navegación del Carrusel -->
+          <div class="carousel-dots" id="carouselDots">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+          </div>
+        </div>
+
+        <!-- SECCIÓN CÓDIGO DE VESTIMENTA -->
+        <div class="dresscode-section">
+          <h3 class="dresscode-title serif-brown">Código de Vestimenta</h3>
+          <div class="dresscode-box">
+            <svg class="bowtie-svg" viewBox="0 0 60 40" fill="#AA771C">
+              <path d="M10 10 L26 18 V22 L10 30 Z M50 10 L34 18 V22 L50 30 Z M26 16 H34 V24 H26 Z" stroke="#8C5638" stroke-width="1.5"/>
+              <circle cx="30" cy="20" r="4" fill="#D4AF37"/>
+            </svg>
+            <span class="dresscode-text">Formal</span>
+          </div>
+        </div>
+
+        <!-- MENSAJE DE AGRADECIMIENTO FINAL -->
+        <div class="thankyou-section">
+          <p class="thankyou-text serif-brown">
+            ¡Gracias por ser parte de este<br>momento tan especial!
+          </p>
+          <div class="gold-divider mini-divider">
+            <span class="leaf-branch left"></span>
+            <span class="heart-icon">♥</span>
+            <span class="leaf-branch right"></span>
+          </div>
+        </div>
+
+        <!-- BOTÓN DE CONFIRMACIÓN DE ASISTENCIA (AL FINAL DE LA TARJETA) -->
+        <div class="cta-container bottom-cta">
+          <button class="btn-rsvp" id="openRsvpBtn">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z"/>
+            </svg>
+            <span>CONFIRMAR ASISTENCIA</span>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Adornos Florales de Esquinas Inferiores -->
+      <img src="assets/images/floral-corner.png" alt="Flores" class="floral-corner bottom-left">
+      <img src="assets/images/floral-corner.png" alt="Flores" class="floral-corner bottom-right">
+
+    </article>
+  </main>
+
+  <!-- ========================================== -->
+  <!-- BARRA DE MÚSICA SIEMPRE VISIBLE (STICKY)   -->
+  <!-- ========================================== -->
+  <div class="sticky-audio-bar">
+    <button class="audio-toggle-btn" id="audioToggleBtn" aria-label="Reproducir o pausar música">
+      <svg class="play-icon" id="playIcon" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M8 5v14l11-7z"/>
+      </svg>
+      <svg class="pause-icon hidden" id="pauseIcon" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+      </svg>
+    </button>
+    
+    <span class="audio-label">Música de fondo</span>
+
+    <!-- Ecualizador de Barras Animado -->
+    <div class="equalizer-bars" id="equalizer">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- MODAL DE CONFIRMACIÓN DE ASISTENCIA (RSVP) -->
+  <!-- ========================================== -->
+  <div class="modal-overlay" id="rsvpModal">
+    <div class="modal-card">
+      <button class="modal-close" id="closeRsvpBtn" aria-label="Cerrar modal">&times;</button>
+      
+      <div class="modal-header">
+        <span class="modal-dove">🕊️</span>
+        <h2 class="cursive-gold modal-title">Confirmar Asistencia</h2>
+        <p class="modal-subtitle">Bautizo y Cumpleaños de Derek Joao</p>
+      </div>
+
+      <form class="rsvp-form" id="rsvpForm">
+        <div class="form-group">
+          <label for="guestName">Nombre y Apellido *</label>
+          <input type="text" id="guestName" required placeholder="Ej: María García">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="adultsCount">Adultos</label>
+            <select id="adultsCount">
+              <option value="1">1 Persona</option>
+              <option value="2" selected>2 Personas</option>
+              <option value="3">3 Personas</option>
+              <option value="4">4+ Personas</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="kidsCount">Niños</label>
+            <select id="kidsCount">
+              <option value="0" selected>0 Niños</option>
+              <option value="1">1 Niño</option>
+              <option value="2">2 Niños</option>
+              <option value="3">3+ Niños</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="attendanceStatus">¿Asistirás al evento? *</label>
+          <select id="attendanceStatus" required>
+            <option value="confirmado">¡Sí, con mucho gusto asistiré! 🎉</option>
+            <option value="declinado">Lo siento, no podré asistir 😔</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="guestMessage">Mensaje para Derek Joao y sus Padres</label>
+          <textarea id="guestMessage" rows="3" placeholder="Escribe tus buenos deseos..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit-rsvp">Enviar Confirmación por WhatsApp</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- MODAL INTERACTIVO DE UBICACIÓN (MAPA)      -->
+  <!-- ========================================== -->
+  <div class="modal-overlay" id="locationModal">
+    <div class="modal-card location-modal-card">
+      <button class="modal-close" id="closeLocationBtn" aria-label="Cerrar modal">&times;</button>
+      
+      <div class="modal-header">
+        <span class="modal-dove">⛪</span>
+        <h2 class="cursive-gold modal-title">Ubicación de la Parroquia</h2>
+        <p class="modal-subtitle">Parroquia Nuestra Señora del Carmen</p>
+        <p class="modal-address">📍 Miraflores, Lima</p>
+      </div>
+
+      <div class="map-container">
+        <iframe 
+          title="Mapa de Parroquia Nuestra Señora del Carmen"
+          src="https://maps.google.com/maps?q=Parroquia%20Nuestra%20Se%C3%B1ora%20del%20Carmen%20Miraflores&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+          width="100%" 
+          height="220" 
+          style="border:0; border-radius: 12px;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+      <div class="location-actions">
+        <a href="https://maps.google.com/?q=Parroquia+Nuestra+Señora+del+Carmen+Miraflores" target="_blank" rel="noopener" class="btn-map-action google-maps">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+          </svg>
+          <span>Abrir en Google Maps</span>
+        </a>
+
+        <a href="https://waze.com/ul?q=Parroquia+Nuestra+Señora+del+Carmen+Miraflores" target="_blank" rel="noopener" class="btn-map-action waze">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+            <path d="M12 2a10 10 0 00-10 10c0 5.52 4.48 10 10 10s10-4.48 10-10A10 10 0 0012 2zm1 14.5h-2v-2h2v2zm0-4h-2V7h2v5.5z"/>
+          </svg>
+          <span>Abrir en Waze</span>
+        </a>
+
+        <button class="btn-map-action copy-address" id="copyAddressBtn">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+          </svg>
+          <span id="copyAddressText">Copiar Dirección</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- LIGHTBOX PARA AMPLIAR IMÁGENES DE GALERÍA -->
+  <div class="lightbox-overlay" id="lightboxOverlay">
+    <span class="lightbox-close" id="lightboxClose">&times;</span>
+    <img src="" alt="Vista Ampliada" class="lightbox-img" id="lightboxImg">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
