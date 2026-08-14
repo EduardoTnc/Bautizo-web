@@ -455,5 +455,52 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // ==========================================
+  // 9. MODAL INTERACTIVO UBICACIÓN RECEPCIÓN
+  // ==========================================
+  const receptionLocationModal = document.getElementById('receptionLocationModal');
+  const openReceptionLocationBtn = document.getElementById('openReceptionLocationBtn');
+  const closeReceptionLocationBtn = document.getElementById('closeReceptionLocationBtn');
+  const copyReceptionAddressBtn = document.getElementById('copyReceptionAddressBtn');
+  const copyReceptionAddressText = document.getElementById('copyReceptionAddressText');
+
+  if (openReceptionLocationBtn && receptionLocationModal) {
+    openReceptionLocationBtn.addEventListener('click', () => {
+      receptionLocationModal.classList.add('active');
+    });
+  }
+
+  if (closeReceptionLocationBtn && receptionLocationModal) {
+    closeReceptionLocationBtn.addEventListener('click', () => {
+      receptionLocationModal.classList.remove('active');
+    });
+  }
+
+  if (receptionLocationModal) {
+    receptionLocationModal.addEventListener('click', (e) => {
+      if (e.target === receptionLocationModal) {
+        receptionLocationModal.classList.remove('active');
+      }
+    });
+  }
+
+  if (copyReceptionAddressBtn) {
+    copyReceptionAddressBtn.addEventListener('click', () => {
+      const receptionUrl = "https://maps.app.goo.gl/VubuY4CnvH2sfMi56?g_st=aw";
+      navigator.clipboard.writeText(receptionUrl).then(() => {
+        if (copyReceptionAddressText) {
+          const originalText = copyReceptionAddressText.textContent;
+          copyReceptionAddressText.textContent = "¡Enlace Copiado! ✓";
+          setTimeout(() => {
+            copyReceptionAddressText.textContent = originalText;
+          }, 2000);
+        }
+      }).catch(err => {
+        console.error('Error al copiar enlace: ', err);
+      });
+    });
+  }
 });
+
 
