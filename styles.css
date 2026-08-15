@@ -990,12 +990,12 @@ body.unopened-locked {
 /* Ribbon de Pergamino */
 .name-ribbon {
   background: linear-gradient(135deg, #FFFFFF 0%, #EBF4FC 100%);
-  border: 1px solid var(--gold-primary);
-  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.25);
-  border-radius: 8px;
-  padding: 10px 20px;
-  margin: 8px auto 10px;
-  max-width: 260px;
+  border: 1.2px solid var(--gold-primary);
+  box-shadow: 0 6px 18px rgba(212, 175, 55, 0.3);
+  border-radius: 10px;
+  padding: 12px 24px;
+  margin: 10px auto 12px;
+  max-width: 300px;
   position: relative;
 }
 
@@ -1003,30 +1003,30 @@ body.unopened-locked {
   content: '';
   position: absolute;
   top: 50%;
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
   background: var(--gold-primary);
   transform: translateY(-50%) rotate(45deg);
 }
 
-.name-ribbon::before { left: -6px; }
-.name-ribbon::after { right: -6px; }
+.name-ribbon::before { left: -7px; }
+.name-ribbon::after { right: -7px; }
 
 .baby-name-first {
   font-family: var(--font-serif);
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   font-weight: 700;
-  color: var(--brown-dark);
-  letter-spacing: 2px;
+  color: var(--blue-primary);
+  letter-spacing: 2.5px;
 }
 
 .baby-name-last {
   font-family: var(--font-serif);
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 600;
-  color: var(--brown-text);
-  letter-spacing: 1.5px;
-  margin-top: 2px;
+  color: var(--blue-primary);
+  letter-spacing: 2px;
+  margin-top: 4px;
 }
 
 /* Frase Espiritual */
