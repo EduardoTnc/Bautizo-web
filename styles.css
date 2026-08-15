@@ -88,19 +88,29 @@ body {
 /* ========================================== */
 /* SOBRE INTERACTIVO DE APERTURA (ENVELOPE)   */
 /* ========================================== */
+/* ========================================== */
+/* SOBRE INTERACTIVO DE APERTURA (ENVELOPE)   */
+/* ========================================== */
 .envelope-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(253, 251, 247, 0.96);
+  background-color: #E8F1FA;
+  background-image: 
+    radial-gradient(#C5DCF0 0.8px, transparent 0.8px),
+    radial-gradient(#C5DCF0 0.8px, #E8F1FA 0.8px);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
   backdrop-filter: blur(8px);
   z-index: 9999;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: opacity 0.8s ease, visibility 0.8s ease;
+  overflow-y: auto;
+  padding: 20px 10px;
 }
 
 .envelope-overlay.opened {
@@ -109,20 +119,62 @@ body {
   pointer-events: none;
 }
 
+.envelope-screen-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 440px;
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+.envelope-header-brand {
+  margin-bottom: 20px;
+}
+
+.carousel-top-svg {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 5px;
+  filter: drop-shadow(0 4px 10px rgba(43, 76, 126, 0.15));
+}
+
+.envelope-main-title {
+  font-family: var(--font-cursive);
+  font-size: 4.8rem;
+  color: #2B5784;
+  margin: -15px 0 -5px;
+  line-height: 1;
+  text-shadow: 0 2px 4px rgba(43, 76, 126, 0.12);
+}
+
+.envelope-sub-title {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #3B6894;
+  letter-spacing: 3px;
+}
+
 .envelope-wrapper {
   perspective: 1000px;
   text-align: center;
+  position: relative;
+  width: 100%;
+  max-width: 340px;
 }
 
 .envelope {
   position: relative;
-  width: 320px;
+  width: 330px;
   height: 220px;
-  background: #EFF6FC;
+  background: #8CAECB;
   border-radius: 8px;
-  box-shadow: 0 20px 40px rgba(26, 54, 93, 0.2);
-  border: 1px solid #D0E3F5;
-  margin: 0 auto 20px;
+  box-shadow: 0 20px 45px rgba(26, 54, 93, 0.25);
+  border: 1px solid #7B9DBA;
+  margin: 0 auto;
   cursor: pointer;
   transform-style: preserve-3d;
 }
@@ -133,9 +185,9 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  border-left: 160px solid #E1EEFA;
-  border-right: 160px solid #E1EEFA;
-  border-bottom: 110px solid #CDE2F5;
+  border-left: 165px solid #84A6C3;
+  border-right: 165px solid #84A6C3;
+  border-bottom: 110px solid #7496B4;
   border-top: 110px solid transparent;
   border-radius: 0 0 8px 8px;
   z-index: 3;
@@ -147,9 +199,9 @@ body {
   left: 0;
   width: 0;
   height: 0;
-  border-left: 160px solid transparent;
-  border-right: 160px solid transparent;
-  border-top: 120px solid #D8E8F7;
+  border-left: 165px solid transparent;
+  border-right: 165px solid transparent;
+  border-top: 125px solid #99B9D4;
   transform-origin: top;
   transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 4;
@@ -164,9 +216,9 @@ body {
   position: absolute;
   top: 10px;
   left: 15px;
-  width: 290px;
-  height: 190px;
-  background: #FFF;
+  width: 300px;
+  height: 195px;
+  background: #FFFDF8;
   border-radius: 6px;
   border: 1px solid var(--gold-primary);
   z-index: 2;
@@ -194,65 +246,84 @@ body {
   filter: drop-shadow(0 4px 10px rgba(59, 126, 189, 0.25));
 }
 
-.preview-dove {
-  font-size: 1.8rem;
-  display: block;
-  margin-bottom: 4px;
-}
-
 .preview-title {
   font-family: var(--font-cursive);
   font-size: 2.2rem;
-  color: var(--gold-dark);
+  color: var(--blue-primary);
 }
 
 .preview-name {
   font-family: var(--font-serif);
   font-size: 1.1rem;
   font-weight: 700;
-  color: var(--brown-dark);
+  color: var(--gold-primary);
   letter-spacing: 2px;
 }
 
-/* Sello de Lacre Dorado */
+/* Sello de Lacre Dorado con sello.png */
 .wax-seal-container {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -40%);
+  transform: translate(-50%, -35%);
   z-index: 5;
   cursor: pointer;
   transition: transform 0.3s ease;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .wax-seal-container:hover {
-  transform: translate(-50%, -40%) scale(1.08);
+  transform: translate(-50%, -35%) scale(1.08);
 }
 
 .seal-img {
-  width: 75px;
-  height: 75px;
-  filter: drop-shadow(0 6px 12px rgba(170, 119, 28, 0.4));
+  width: 86px;
+  height: 86px;
+  filter: drop-shadow(0 8px 18px rgba(180, 135, 30, 0.55));
 }
 
-.seal-prompt {
-  display: block;
+.curved-text-svg {
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  width: 150px;
+  height: 150px;
+  pointer-events: none;
+}
+
+.envelope-mini-card {
+  background: #FFFDF8;
+  border: 1px solid var(--gold-light);
+  border-radius: 8px;
+  padding: 10px 14px;
+  max-width: 210px;
+  margin: -45px 5px 0 auto;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 8px 20px rgba(26, 54, 93, 0.18);
+  transform: rotate(2deg);
+}
+
+.envelope-mini-card p {
+  font-family: var(--font-serif);
   font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--brown-dark);
-  margin-top: 6px;
-  background: rgba(255,255,255,0.9);
-  padding: 4px 10px;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  letter-spacing: 0.5px;
+  font-weight: 700;
+  color: #2B5784;
+  letter-spacing: 1.2px;
+  line-height: 1.35;
+  text-align: center;
 }
 
-.envelope-instruction {
-  font-size: 0.9rem;
-  color: var(--brown-text);
-  font-weight: 500;
+.envelope-footer-title {
+  font-family: var(--font-cursive);
+  font-size: 3.6rem;
+  color: #2B5784;
   margin-top: 15px;
+  line-height: 1;
 }
 
 /* ========================================== */

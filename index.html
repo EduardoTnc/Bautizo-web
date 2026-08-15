@@ -24,32 +24,71 @@
   <!-- ========================================== -->
   <!-- SOBRE INTERACTIVO DE APERTURA (ENVELOPE)   -->
   <!-- ========================================== -->
+  <!-- ========================================== -->
+  <!-- SOBRE INTERACTIVO DE APERTURA (ENVELOPE)   -->
+  <!-- ========================================== -->
   <div class="envelope-overlay" id="envelopeOverlay">
-    <div class="envelope-wrapper" id="envelopeWrapper">
-      <div class="envelope" id="envelope">
-        <!-- Solapa Superior -->
-        <div class="flap top-flap"></div>
-        
-        <!-- Solapas Laterales e Inferior -->
-        <div class="pocket"></div>
+    <div class="envelope-screen-content">
+      
+      <!-- Encabezado con Carrusel y Nombre -->
+      <div class="envelope-header-brand">
+        <div class="carousel-ornament-icon">
+          <svg viewBox="0 0 100 100" class="carousel-top-svg">
+            <path d="M50 5 L90 30 H10 Z" fill="#9BBBD6" stroke="#C5A046" stroke-width="2"/>
+            <rect x="48" y="30" width="4" height="40" fill="#C5A046"/>
+            <circle cx="50" cy="5" r="4" fill="#C5A046"/>
+            <path d="M25 30 V65 M75 30 V65" stroke="#C5A046" stroke-width="1.5" stroke-dasharray="3 3"/>
+            <path d="M20 50 C25 45, 30 45, 35 50 C32 55, 25 58, 20 50 Z" fill="#FFFFFF" stroke="#9BBBD6" stroke-width="1.5"/>
+            <path d="M70 50 C75 45, 80 45, 85 50 C82 55, 75 58, 70 50 Z" fill="#FFFFFF" stroke="#9BBBD6" stroke-width="1.5"/>
+            <rect x="15" y="70" width="70" height="10" rx="4" fill="#9BBBD6" stroke="#C5A046" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <h1 class="envelope-main-title cursive-blue">Derek</h1>
+        <h2 class="envelope-sub-title serif-blue">CHAVEZ DE LA CRUZ</h2>
+      </div>
 
-        <!-- Tarjeta Sobresaliente -->
-        <div class="card-preview">
-          <div class="card-preview-inner">
-            <img src="assets/images/bautizo 3.png" alt="Ángel de Bautizo" class="preview-angel-img">
-            <p class="preview-title">Mi Bautizo</p>
-            <p class="preview-name">Derek Joao</p>
+      <!-- Wrapper del Sobre -->
+      <div class="envelope-wrapper" id="envelopeWrapper">
+        <div class="envelope" id="envelope">
+          <!-- Solapa Superior -->
+          <div class="flap top-flap"></div>
+          
+          <!-- Solapas Laterales e Inferior -->
+          <div class="pocket"></div>
+
+          <!-- Tarjeta Sobresaliente -->
+          <div class="card-preview">
+            <div class="card-preview-inner">
+              <img src="assets/images/bautizo 3.png" alt="Ángel de Bautizo" class="preview-angel-img">
+              <p class="preview-title">Mi Bautizo</p>
+              <p class="preview-name">Derek Joao</p>
+            </div>
+          </div>
+
+          <!-- Sello de Lacre Dorado Interactivo (sello.png con "D") -->
+          <div class="wax-seal-container" id="waxSeal">
+            <svg class="curved-text-svg" viewBox="0 0 160 160">
+              <path id="textPath" d="M 20,80 A 60,60 0 1,1 140,80" fill="none" />
+              <text font-size="10" font-weight="700" fill="#2B4C7E" letter-spacing="2">
+                <textPath href="#textPath" startOffset="50%" text-anchor="middle">
+                  TOCA EL SELLO PARA ABRIR
+                </textPath>
+              </text>
+            </svg>
+            <img src="assets/images/sello.png" alt="Sello de Lacre Dorado Derek" class="seal-img">
+            <div class="seal-glow"></div>
           </div>
         </div>
 
-        <!-- Sello de Lacre Dorado Interactivo -->
-        <div class="wax-seal-container" id="waxSeal">
-          <img src="assets/images/wax-seal.png" alt="Sello de Lacre Dorado" class="seal-img">
-          <div class="seal-glow"></div>
-          <span class="seal-prompt">Haz clic para abrir</span>
+        <!-- Tarjetita de Anuncio Inferior Derecha -->
+        <div class="envelope-mini-card">
+          <p>CELEBRA JUNTO A NOSOTROS EL BAUTIZO DE NUESTRO HIJO</p>
         </div>
       </div>
-      <p class="envelope-instruction">Haz clic en el sello dorado para abrir la invitación</p>
+
+      <!-- Frase Final "Mi Bautizo" -->
+      <p class="envelope-footer-title cursive-blue">Mi Bautizo</p>
+
     </div>
   </div>
 
