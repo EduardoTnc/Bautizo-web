@@ -49,6 +49,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // Reproducir música suave
     startBackgroundMusic();
 
+    // Reproducir video hero de la portada en bucle sin sonido
+    const heroVideo = document.querySelector('.hero-bautizo-video');
+    if (heroVideo) {
+      heroVideo.muted = true;
+      heroVideo.play().catch(err => console.log('Autoplay video:', err));
+    }
+
     // Desvanecer overlay después de abrir la tarjeta
     setTimeout(() => {
       envelopeOverlay.classList.add('opened');

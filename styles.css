@@ -660,6 +660,44 @@ body.unopened-locked {
 }
 
 /* ========================================== */
+/* VIDEO HERO DE BAUTIZO                      */
+/* ========================================== */
+.hero-video-wrapper {
+  margin: 12px auto 18px;
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-video-frame {
+  width: 100%;
+  border-radius: 20px;
+  padding: 5px;
+  background: linear-gradient(135deg, #FFFFFF 0%, #F4F8FC 100%);
+  border: 2px solid var(--gold-primary);
+  box-shadow: 0 10px 30px rgba(24, 51, 89, 0.22);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-video-frame:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 35px rgba(24, 51, 89, 0.28);
+  border-color: #D4AF37;
+}
+
+.hero-bautizo-video {
+  width: 100%;
+  max-height: 420px;
+  height: auto;
+  border-radius: 15px;
+  display: block;
+  object-fit: cover;
+  background: #000;
+}
+
+/* ========================================== */
 /* PORTADA                                    */
 /* ========================================== */
 /* ÁNGEL DE BAUTIZO ADORNO PRINCIPAL (bautizo 3.png) */
