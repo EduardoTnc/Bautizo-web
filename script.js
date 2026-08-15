@@ -30,6 +30,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (envelopeOpened) return;
     envelopeOpened = true;
 
+    // Asegurar que la pantalla comience desde arriba de la invitación
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+
     // Animación 3D del sobre
     envelope.classList.add('open');
 
@@ -39,7 +44,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Desvanecer overlay después de abrir la tarjeta
     setTimeout(() => {
       envelopeOverlay.classList.add('opened');
-    }, 1200);
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    }, 1100);
   }
 
   if (waxSeal) {

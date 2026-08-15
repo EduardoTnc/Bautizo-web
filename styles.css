@@ -512,10 +512,35 @@ body {
   transform: scaleY(-1) scaleX(-1);
 }
 
-/* SECCIONES INTERNAS EN LA MISMA TARJETA */
+/* SECCIONES INTERNAS EN LA TARJETA - SEPARACIÓN CLARA Y DISTINTIVA */
 .card-section {
   position: relative;
   z-index: 2;
+  margin-top: 35px;
+  padding: 32px 20px;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 24px;
+  border: 1px solid rgba(197, 160, 70, 0.28);
+  box-shadow: 0 8px 24px rgba(24, 51, 89, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-section.section-header {
+  margin-top: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 10px 5px 25px;
+}
+
+/* Alternancia de color suave para que cada sección se distinga al instante */
+.card-section:nth-of-type(even) {
+  background: rgba(235, 243, 250, 0.75);
+  border: 1px solid rgba(155, 187, 214, 0.45);
+}
+
+.card-section:hover {
+  box-shadow: 0 12px 30px rgba(24, 51, 89, 0.1);
 }
 
 .section-details {
