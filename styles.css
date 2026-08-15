@@ -660,7 +660,7 @@ body.unopened-locked {
 }
 
 /* ========================================== */
-/* VIDEO HERO PURO A PANTALLA COMPLETA        */
+/* VIDEO HERO RESPONSIVE                      */
 /* ========================================== */
 .fullscreen-hero-video-section {
   position: relative;
@@ -671,21 +671,46 @@ body.unopened-locked {
   margin-right: -50vw;
   height: 100vh;
   height: 100dvh;
+  max-height: 100dvh;
   overflow: hidden;
   margin-bottom: 12px;
   padding: 0;
   background: #000000;
   box-shadow: 0 15px 40px rgba(24, 51, 89, 0.35);
   z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .fullscreen-bautizo-video {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center center;
   display: block;
   filter: none !important;
   opacity: 1 !important;
+}
+
+/* Adaptación responsive para pantallas de tablets y escritorio */
+@media (min-width: 768px) {
+  .fullscreen-hero-video-section {
+    width: 100%;
+    max-width: 480px;
+    height: 85vh;
+    max-height: 760px;
+    left: auto;
+    right: auto;
+    margin: 15px auto 25px;
+    border-radius: 24px;
+    border: 3.5px solid var(--gold-primary);
+    box-shadow: 0 20px 50px rgba(24, 51, 89, 0.3);
+  }
+
+  .fullscreen-bautizo-video {
+    border-radius: 20px;
+  }
 }
 
 /* ========================================== */
