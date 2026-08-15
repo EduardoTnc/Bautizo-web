@@ -130,32 +130,56 @@ body {
   margin: auto;
 }
 
+/* 🎠 CARRUSEL ANIMADO 3D QUE DA VUELTAS (B4.png) */
+.carousel-animated-stage {
+  perspective: 1000px;
+  margin: 5px auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-spinning-wrapper {
+  transform-style: preserve-3d;
+  animation: rotateCarousel3D 10s ease-in-out infinite alternate;
+}
+
+@keyframes rotateCarousel3D {
+  0% {
+    transform: rotateY(-22deg) translateY(0px) scale(1);
+  }
+  25% {
+    transform: rotateY(22deg) translateY(-8px) scale(1.04);
+  }
+  50% {
+    transform: rotateY(-22deg) translateY(0px) scale(1);
+  }
+  75% {
+    transform: rotateY(22deg) translateY(-8px) scale(1.04);
+  }
+  100% {
+    transform: rotateY(-22deg) translateY(0px) scale(1);
+  }
+}
+
+.carousel-3d-img {
+  width: 230px;
+  max-width: 85vw;
+  height: auto;
+  filter: drop-shadow(0 14px 30px rgba(26, 54, 93, 0.25));
+}
+
+/* ✒️ TÍTULO DEREK CHAVEZ DE LA CRUZ (B3.png) */
 .envelope-header-brand {
-  margin-bottom: 20px;
+  margin: 5px 0 15px;
+  text-align: center;
 }
 
-.carousel-top-svg {
-  width: 90px;
-  height: 90px;
-  margin: 0 auto 5px;
-  filter: drop-shadow(0 4px 10px rgba(43, 76, 126, 0.15));
-}
-
-.envelope-main-title {
-  font-family: var(--font-cursive);
-  font-size: 4.8rem;
-  color: #2B5784;
-  margin: -15px 0 -5px;
-  line-height: 1;
-  text-shadow: 0 2px 4px rgba(43, 76, 126, 0.12);
-}
-
-.envelope-sub-title {
-  font-family: var(--font-serif);
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #3B6894;
-  letter-spacing: 3px;
+.derek-title-img {
+  width: 280px;
+  max-width: 85vw;
+  height: auto;
+  filter: drop-shadow(0 3px 8px rgba(43, 76, 126, 0.15));
 }
 
 .envelope-wrapper {
@@ -295,35 +319,58 @@ body {
   pointer-events: none;
 }
 
-.envelope-mini-card {
-  background: #FFFDF8;
-  border: 1px solid var(--gold-light);
-  border-radius: 8px;
-  padding: 10px 14px;
-  max-width: 210px;
-  margin: -45px 5px 0 auto;
-  position: relative;
-  z-index: 10;
-  box-shadow: 0 8px 20px rgba(26, 54, 93, 0.18);
+/* 🎠 CABALLO GALLOPANTE DE CARRUSEL (B1.png) */
+.carousel-horse-left-img {
+  position: absolute;
+  bottom: -22px;
+  left: -48px;
+  width: 135px;
+  height: auto;
+  z-index: 12;
+  filter: drop-shadow(0 8px 18px rgba(26, 54, 93, 0.25));
+  animation: horseGallopBounce 3.5s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes horseGallopBounce {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(4deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+/* 📄 MINI TARJETA DE ANUNCIO (B2.png) */
+.envelope-mini-card-container {
+  position: absolute;
+  bottom: -32px;
+  right: -25px;
+  z-index: 12;
   transform: rotate(2deg);
 }
 
-.envelope-mini-card p {
-  font-family: var(--font-serif);
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: #2B5784;
-  letter-spacing: 1.2px;
-  line-height: 1.35;
+.mini-card-img {
+  width: 220px;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 10px 25px rgba(26, 54, 93, 0.22);
+}
+
+/* 🖋️ MI BAUTIZO FOOTER (B5.png) */
+.envelope-footer-brand {
+  margin-top: 45px;
   text-align: center;
 }
 
-.envelope-footer-title {
-  font-family: var(--font-cursive);
-  font-size: 3.6rem;
-  color: #2B5784;
-  margin-top: 15px;
-  line-height: 1;
+.mi-bautizo-footer-img {
+  width: 230px;
+  max-width: 80vw;
+  height: auto;
+  filter: drop-shadow(0 3px 8px rgba(43, 76, 126, 0.15));
 }
 
 /* ========================================== */
