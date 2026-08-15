@@ -183,6 +183,14 @@ body {
   text-align: center;
 }
 
+.preview-angel-img {
+  width: 55px;
+  height: auto;
+  display: block;
+  margin: 0 auto 4px;
+  filter: drop-shadow(0 4px 10px rgba(59, 126, 189, 0.25));
+}
+
 .preview-dove {
   font-size: 1.8rem;
   display: block;
@@ -350,37 +358,37 @@ body {
   text-align: center;
 }
 
-/* Esquinas Florales Integradas */
+/* Esquinas Florales Integradas (bautizo 1.png & Bautizo 2.png) */
 .floral-corner {
   position: absolute;
-  width: 100px;
+  width: 140px;
   height: auto;
   pointer-events: none;
   z-index: 1;
-  opacity: 0.9;
+  opacity: 0.95;
+  filter: drop-shadow(0 4px 10px rgba(43, 76, 126, 0.1));
 }
 
 .top-left {
-  top: -8px;
-  left: -8px;
+  top: -10px;
+  left: -10px;
 }
 
 .top-right {
-  top: -8px;
-  right: -8px;
-  transform: scaleX(-1);
+  top: -10px;
+  right: -10px;
 }
 
 .bottom-left {
-  bottom: -8px;
-  left: -8px;
-  transform: scaleY(-1);
+  bottom: -10px;
+  left: -10px;
+  transform: scaleY(-1) scaleX(-1);
 }
 
 .bottom-right {
-  bottom: -8px;
-  right: -8px;
-  transform: scale(-1, -1);
+  bottom: -10px;
+  right: -10px;
+  transform: scaleY(-1) scaleX(-1);
 }
 
 /* SECCIONES INTERNAS EN LA MISMA TARJETA */
@@ -398,6 +406,37 @@ body {
 /* ========================================== */
 /* PORTADA                                    */
 /* ========================================== */
+/* ÁNGEL DE BAUTIZO ADORNO PRINCIPAL (bautizo 3.png) */
+.angel-hero-container {
+  margin: 5px auto 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 5;
+}
+
+.angel-hero-img {
+  width: 140px;
+  height: auto;
+  filter: drop-shadow(0 8px 22px rgba(59, 126, 189, 0.28));
+  animation: floatAngel 4s ease-in-out infinite alternate;
+  transition: transform 0.3s ease;
+}
+
+.angel-hero-img:hover {
+  transform: scale(1.06) rotate(-2deg);
+}
+
+@keyframes floatAngel {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-8px) rotate(1.5deg);
+  }
+}
+
 .header-emblem {
   position: relative;
   width: 70px;
