@@ -2,19 +2,22 @@
 /* ESTILOS GLOBALES Y VARIABLES DE DISEÑO     */
 /* ========================================== */
 :root {
-  --bg-parchment: #F2F7FC;
+  --bg-parchment: #EBF3FA;
   --bg-card: #FFFFFF;
-  --bg-soft-cream: #EEF6FC;
-  --gold-primary: #D4AF37;
-  --gold-dark: #B38728;
-  --gold-light: #F6E6B4;
-  --brown-text: #2B4C7E;
-  --brown-dark: #1A365D;
-  --brown-light: #5A88C0;
-  --btn-cta: #3B7EBD;
-  --btn-cta-hover: #2C669C;
-  --shadow-soft: 0 10px 30px rgba(43, 76, 126, 0.12);
-  --shadow-card: 0 15px 40px rgba(26, 54, 93, 0.16);
+  --bg-soft-cream: #F2F7FC;
+  --gold-primary: #C5A046;   /* Metallic Gold from reference image headers */
+  --gold-dark: #A6832A;
+  --gold-light: #F4E8C1;
+  --blue-primary: #183359;   /* Deep Royal Navy from reference image calligraphy */
+  --blue-dark: #0F223D;
+  --blue-light: #5B7B9A;
+  --brown-text: #183359;     /* Deep Royal Navy script & accent */
+  --brown-dark: #0F223D;     /* Midnight Navy */
+  --brown-light: #5B7B9A;    /* Muted watercolor blue */
+  --btn-cta: #1A3A68;        /* Deep Royal Blue CTA button */
+  --btn-cta-hover: #102444;  /* Midnight navy hover */
+  --shadow-soft: 0 10px 30px rgba(24, 51, 89, 0.12);
+  --shadow-card: 0 15px 40px rgba(15, 34, 61, 0.15);
   --font-cursive: 'Great Vibes', 'Alex Brush', cursive;
   --font-serif: 'Cormorant Garamond', Georgia, serif;
   --font-sans: 'Montserrat', sans-serif;
@@ -454,28 +457,35 @@ body {
 
 .cursive-gold {
   font-family: var(--font-cursive);
-  color: var(--gold-dark);
+  color: var(--blue-primary);
   font-weight: 400;
   line-height: 1.1;
-  text-shadow: 0 1px 2px rgba(212, 175, 55, 0.2);
+  text-shadow: 0 1px 2px rgba(24, 51, 89, 0.1);
 }
 
 .main-title {
   font-size: 3.5rem;
   margin-bottom: -5px;
+  color: var(--gold-primary);
+  font-family: var(--font-serif);
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .sub-title {
-  font-family: var(--font-serif);
-  font-size: 1.8rem;
+  font-family: var(--font-cursive);
+  font-size: 2.8rem;
   font-weight: 400;
-  color: var(--brown-text);
+  color: var(--blue-primary);
   margin-bottom: 12px;
 }
 
 .serif-brown {
   font-family: var(--font-serif);
-  color: var(--brown-text);
+  color: var(--gold-primary);
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
 /* Separador Dorado */
