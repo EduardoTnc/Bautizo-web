@@ -60,11 +60,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function startBackgroundMusic() {
     if (!bgAudio) return;
-    bgAudio.play().then(() => {
-      updateAudioUI(true);
-    }).catch(err => {
-      console.log('Audio autoplay prevented:', err);
-    });
+    bgAudio.volume = 0.8;
+    const playPromise = bgAudio.play();
+    if (playPromise !== undefined) {
+      playPromise.then(() => {
+        updateAudioUI(true);
+      }).catch(err => {
+        console.log('Autoplay restricted by browser:', err);
+        const enableAudioOnTouch = () => {
+          bgAudio.play().then(() => updateAudioUI(true)).catch(e => console.log(e));
+          window.removeEventListener('click', enableAudioOnTouch);
+          window.removeEventListener('touchstart', enableAudioOnTouch);
+        };
+        window.addEventListener('click', enableAudioOnTouch, { once: true });
+        window.addEventListener('touchstart', enableAudioOnTouch, { once: true });
+      });
+    }
   }
 
   function stopBackgroundMusic() {
