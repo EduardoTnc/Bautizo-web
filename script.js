@@ -43,8 +43,9 @@ document.addEventListener('DOMContentLoaded', () => {
     document.documentElement.scrollTop = 0;
     document.body.scrollTop = 0;
 
-    // Animación 3D del sobre
-    envelope.classList.add('open');
+    // Animación 3D del sobre y desvanecimiento del sello
+    if (envelope) envelope.classList.add('open');
+    if (waxSeal) waxSeal.classList.add('seal-open');
 
     // Reproducir música suave
     startBackgroundMusic();
@@ -56,22 +57,32 @@ document.addEventListener('DOMContentLoaded', () => {
       heroVideo.play().catch(err => console.log('Autoplay video:', err));
     }
 
-    // Desvanecer overlay después de abrir la tarjeta
+    // Desvanecer overlay después de ejecutar la animación 3D de apertura
     setTimeout(() => {
-      envelopeOverlay.classList.add('opened');
+      if (envelopeOverlay) envelopeOverlay.classList.add('opened');
       document.body.classList.remove('unopened-locked');
       window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
       document.documentElement.scrollTop = 0;
       document.body.scrollTop = 0;
-    }, 1100);
+    }, 1150);
   }
 
-  if (waxSeal) {
-    waxSeal.addEventListener('click', openEnvelope);
-  }
-  if (envelope) {
-    envelope.addEventListener('click', openEnvelope);
-  }
+  // Vincular eventos de apertura (click y touch) a todos los elementos del sobre
+  const envelopeInteractiveElements = [
+    waxSeal,
+    envelope,
+    document.querySelector('.envelope-wrapper'),
+    document.querySelector('.card-preview'),
+    document.querySelector('.envelope-mini-card-container'),
+    envelopeOverlay
+  ];
+
+  envelopeInteractiveElements.forEach(el => {
+    if (el) {
+      el.addEventListener('click', openEnvelope);
+      el.addEventListener('touchstart', openEnvelope, { passive: true });
+    }
+  });
 
   // ==========================================
   // 3. REPRODUCTOR DE MÚSICA DE FONDO MP3

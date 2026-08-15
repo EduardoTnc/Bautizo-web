@@ -322,6 +322,14 @@ body.unopened-locked {
   transform: translate(-50%, -35%) scale(1.08);
 }
 
+.envelope.open .wax-seal-container,
+.wax-seal-container.seal-open {
+  transform: translate(-50%, -35%) scale(1.4);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
 .seal-img {
   width: 86px;
   height: 86px;
