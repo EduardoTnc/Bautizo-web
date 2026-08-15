@@ -393,7 +393,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (copyReceptionAddressBtn) {
     copyReceptionAddressBtn.addEventListener('click', () => {
-      const receptionUrl = "https://maps.app.goo.gl/VubuY4CnvH2sfMi56?g_st=aw";
+      const receptionUrl = "https://www.google.com/maps/place/Studio+Fitness/@-11.9710593,-77.0773035,17z";
       navigator.clipboard.writeText(receptionUrl).then(() => {
         if (copyReceptionAddressText) {
           const originalText = copyReceptionAddressText.textContent;
