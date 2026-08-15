@@ -382,8 +382,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       const encodedText = encodeURIComponent(text);
-      // Abrir enlace WhatsApp
-      window.open(`https://api.whatsapp.com/send?text=${encodedText}`, '_blank');
+      // Abrir enlace directo de WhatsApp con el número 949040186 (+51 949040186)
+      window.open(`https://api.whatsapp.com/send?phone=51949040186&text=${encodedText}`, '_blank');
 
       rsvpModal.classList.remove('active');
       triggerConfetti();

@@ -552,7 +552,7 @@ body.unopened-locked {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 40px auto 30px;
+  margin: 12px auto 8px;
   width: 90%;
   max-width: 380px;
   position: relative;
@@ -560,7 +560,7 @@ body.unopened-locked {
 
 .divider-svg {
   width: 100%;
-  height: 28px;
+  height: 24px;
   display: block;
 }
 
@@ -568,8 +568,8 @@ body.unopened-locked {
 /* ADORNOS FLORALES Y ESPIRITUALES (Ba1 - Ba7)*/
 /* ========================================== */
 .ba-floral-divider-img {
-  width: 220px;
-  max-width: 80%;
+  width: 180px;
+  max-width: 75%;
   height: auto;
   margin: 0 auto;
   display: block;
@@ -583,7 +583,7 @@ body.unopened-locked {
 
 .spiritual-quote-container {
   position: relative;
-  margin: 25px auto 15px;
+  margin: 14px auto 8px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -672,7 +672,7 @@ body.unopened-locked {
   height: 100vh;
   height: 100dvh;
   overflow: hidden;
-  margin-bottom: 30px;
+  margin-bottom: 12px;
   padding: 0;
   background: #000000;
   box-shadow: 0 15px 40px rgba(24, 51, 89, 0.35);
@@ -692,16 +692,16 @@ body.unopened-locked {
 /* PORTADA                                    */
 /* ========================================== */
 .section-header {
-  padding: 25px 15px 20px;
+  padding: 10px 10px 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 14px;
+  gap: 8px;
 }
 
 /* ÁNGEL DE BAUTIZO ADORNO PRINCIPAL (bautizo 3.png) */
 .angel-hero-container {
-  margin: 10px auto 18px;
+  margin: 4px auto 6px;
   display: flex;
   justify-content: center;
   align-items: center;
