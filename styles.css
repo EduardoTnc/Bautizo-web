@@ -786,7 +786,7 @@ body.unopened-locked {
   align-items: center;
   justify-content: center;
   gap: 12px;
-  margin: 18px auto 25px;
+  margin: 6px auto 8px;
   width: 80%;
 }
 
@@ -816,7 +816,7 @@ body.unopened-locked {
 
 /* Marco Ovalado y Retrato */
 .portrait-container {
-  margin: 28px auto 32px;
+  margin: 6px auto 10px;
   display: flex;
   justify-content: center;
 }
@@ -875,7 +875,7 @@ body.unopened-locked {
   box-shadow: 0 4px 12px rgba(212, 175, 55, 0.25);
   border-radius: 8px;
   padding: 10px 20px;
-  margin: 20px auto 15px;
+  margin: 8px auto 10px;
   max-width: 260px;
   position: relative;
 }
