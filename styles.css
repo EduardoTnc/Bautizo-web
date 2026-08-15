@@ -64,28 +64,28 @@ body {
 .petal {
   position: absolute;
   border-radius: 85% 0 85% 0;
-  opacity: 0.85;
-  box-shadow: 0 4px 12px rgba(24, 51, 89, 0.16);
-  animation: floatPetal 11s linear infinite;
+  opacity: 0.35;
+  box-shadow: 0 2px 6px rgba(24, 51, 89, 0.08);
+  animation: floatPetal 12s linear infinite;
   will-change: transform, opacity;
 }
 
 /* Variación 1: Hoja Azul Pastel */
 .petal.blue-soft {
   background: radial-gradient(circle at 30% 30%, #E3EFEF 0%, #8CAECB 75%, #5982A6 100%);
-  filter: drop-shadow(0 2px 6px rgba(24, 51, 89, 0.2));
+  filter: drop-shadow(0 2px 4px rgba(24, 51, 89, 0.1));
 }
 
 /* Variación 2: Hoja Azul Rey Elegante */
 .petal.blue-royal {
   background: radial-gradient(circle at 30% 30%, #5B8CB9 0%, #183359 85%, #0F223D 100%);
-  filter: drop-shadow(0 3px 8px rgba(24, 51, 89, 0.25));
+  filter: drop-shadow(0 2px 4px rgba(24, 51, 89, 0.12));
 }
 
 /* Variación 3: Hoja Dorada Metálica */
 .petal.gold-leaf {
   background: radial-gradient(circle at 30% 30%, #FFFDF8 0%, #D4AF37 70%, #997A15 100%);
-  filter: drop-shadow(0 3px 8px rgba(197, 160, 70, 0.3));
+  filter: drop-shadow(0 2px 4px rgba(197, 160, 70, 0.15));
 }
 
 @keyframes floatPetal {
@@ -94,14 +94,14 @@ body {
     opacity: 0;
   }
   12% {
-    opacity: 0.85;
+    opacity: 0.35;
   }
   50% {
     transform: translateY(50vh) rotate(270deg) translateX(25px);
-    opacity: 0.85;
+    opacity: 0.35;
   }
   88% {
-    opacity: 0.85;
+    opacity: 0.35;
   }
   100% {
     transform: translateY(105vh) rotate(540deg) translateX(-20px);

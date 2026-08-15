@@ -395,7 +395,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (copyReceptionAddressBtn) {
     copyReceptionAddressBtn.addEventListener('click', () => {
-      const receptionUrl = "https://www.google.com/maps/place/Studio+Fitness/@-11.9710593,-77.0773035,17z";
+      const receptionUrl = "https://www.google.com/maps/place/Studio+Fitness,+mz7+lt11,+Av.+Mara%C3%B1on,+Los+Olivos+15306/data=!4m2!3m1!1s0x9105cf91c9828f8d:0xe690ea3a9fcd619a";
       navigator.clipboard.writeText(receptionUrl).then(() => {
         if (copyReceptionAddressText) {
           const originalText = copyReceptionAddressText.textContent;
