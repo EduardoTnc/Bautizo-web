@@ -48,39 +48,63 @@ body {
   padding-bottom: 80px; /* Espacio para barra flotante de música */
 }
 
-/* Petales Flotantes en Fondo */
+/* Hojas y Pétalos Azules y Dorados que Caen Dentro de la Tarjeta */
 .petals-container {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
+  height: 100dvh;
   pointer-events: none;
-  z-index: 1;
+  z-index: 3;
   overflow: hidden;
 }
 
 .petal {
   position: absolute;
-  background: radial-gradient(circle, #E1EEFA 0%, #B8D6F4 80%);
-  border-radius: 15px 0 15px 0;
-  opacity: 0.7;
-  animation: floatPetal 12s linear infinite;
+  border-radius: 85% 0 85% 0;
+  opacity: 0.85;
+  box-shadow: 0 4px 12px rgba(24, 51, 89, 0.16);
+  animation: floatPetal 11s linear infinite;
+  will-change: transform, opacity;
+}
+
+/* Variación 1: Hoja Azul Pastel */
+.petal.blue-soft {
+  background: radial-gradient(circle at 30% 30%, #E3EFEF 0%, #8CAECB 75%, #5982A6 100%);
+  filter: drop-shadow(0 2px 6px rgba(24, 51, 89, 0.2));
+}
+
+/* Variación 2: Hoja Azul Rey Elegante */
+.petal.blue-royal {
+  background: radial-gradient(circle at 30% 30%, #5B8CB9 0%, #183359 85%, #0F223D 100%);
+  filter: drop-shadow(0 3px 8px rgba(24, 51, 89, 0.25));
+}
+
+/* Variación 3: Hoja Dorada Metálica */
+.petal.gold-leaf {
+  background: radial-gradient(circle at 30% 30%, #FFFDF8 0%, #D4AF37 70%, #997A15 100%);
+  filter: drop-shadow(0 3px 8px rgba(197, 160, 70, 0.3));
 }
 
 @keyframes floatPetal {
   0% {
-    transform: translateY(-50px) rotate(0deg) scale(0.8);
+    transform: translateY(-60px) rotate(0deg) translateX(0);
     opacity: 0;
   }
-  10% {
-    opacity: 0.7;
+  12% {
+    opacity: 0.85;
   }
-  90% {
-    opacity: 0.7;
+  50% {
+    transform: translateY(50vh) rotate(270deg) translateX(25px);
+    opacity: 0.85;
+  }
+  88% {
+    opacity: 0.85;
   }
   100% {
-    transform: translateY(105vh) rotate(360deg) scale(1.2);
+    transform: translateY(105vh) rotate(540deg) translateX(-20px);
     opacity: 0;
   }
 }

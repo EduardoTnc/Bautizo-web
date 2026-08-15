@@ -1,19 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
   // ==========================================
-  // 1. ANIMA DE PETALOS FLOTANTES EN FONDO
+  // 1. ANIMACIÓN DE HOJAS Y PÉTALOS AZULES Y DORADOS QUE CAEN DENTRO DE LA TARJETA
   // ==========================================
   const petalsContainer = document.getElementById('petalsContainer');
   if (petalsContainer) {
-    const petalCount = 18;
-    for (let i = 0; i < petalCount; i++) {
-      const petal = document.createElement('div');
-      petal.className = 'petal';
-      petal.style.left = `${Math.random() * 100}vw`;
-      petal.style.animationDuration = `${8 + Math.random() * 10}s`;
-      petal.style.animationDelay = `${Math.random() * 5}s`;
-      petal.style.width = `${10 + Math.random() * 12}px`;
-      petal.style.height = `${12 + Math.random() * 14}px`;
-      petalsContainer.appendChild(petal);
+    const leafTypes = ['blue-soft', 'blue-royal', 'blue-soft', 'gold-leaf'];
+    const leafCount = 24;
+    for (let i = 0; i < leafCount; i++) {
+      const leaf = document.createElement('div');
+      const type = leafTypes[i % leafTypes.length];
+      leaf.className = `petal ${type}`;
+      leaf.style.left = `${Math.random() * 96}vw`;
+      leaf.style.animationDuration = `${7 + Math.random() * 9}s`;
+      leaf.style.animationDelay = `${Math.random() * 7}s`;
+      leaf.style.width = `${12 + Math.random() * 14}px`;
+      leaf.style.height = `${15 + Math.random() * 16}px`;
+      petalsContainer.appendChild(leaf);
     }
   }
 
