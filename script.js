@@ -50,105 +50,57 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================
-  // 3. SINTETIZADOR DE MÚSICA WEB AUDIO Y REPRODUCTOR
+  // 3. REPRODUCTOR DE MÚSICA DE FONDO MP3
   // ==========================================
-  let audioCtx = null;
-  let isPlaying = false;
-  let synthTimer = null;
-
+  const bgAudio = document.getElementById('bgAudio');
   const audioToggleBtn = document.getElementById('audioToggleBtn');
   const playIcon = document.getElementById('playIcon');
   const pauseIcon = document.getElementById('pauseIcon');
   const equalizer = document.getElementById('equalizer');
 
-  // Melodía suave e instrumental de nana en formato de notas (Frecuencias Hz)
-  const melodyNotes = [
-    261.63, 329.63, 392.00, 523.25, 392.00, 329.63,
-    293.66, 349.23, 440.00, 523.25, 440.00, 349.23,
-    329.63, 392.00, 523.25, 659.25, 523.25, 392.00,
-    392.00, 440.00, 349.23, 329.63, 293.66, 261.63
-  ];
-
-  let currentNoteIndex = 0;
-
-  function playGentleNote(freq) {
-    if (!audioCtx) return;
-
-    try {
-      const osc = audioCtx.createOscillator();
-      const gain = audioCtx.createGain();
-
-      osc.type = 'sine';
-      osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
-
-      gain.gain.setValueAtTime(0.001, audioCtx.currentTime);
-      gain.gain.exponentialRampToValueAtTime(0.08, audioCtx.currentTime + 0.1);
-      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 1.2);
-
-      osc.connect(gain);
-      gain.connect(audioCtx.destination);
-
-      osc.start();
-      osc.stop(audioCtx.currentTime + 1.3);
-    } catch (e) {
-      console.log('Audio playback exception', e);
-    }
-  }
-
   function startBackgroundMusic() {
-    if (isPlaying) return;
-
-    try {
-      const AudioContext = window.AudioContext || window.webkitAudioContext;
-      if (!audioCtx) {
-        audioCtx = new AudioContext();
-      }
-
-      if (audioCtx.state === 'suspended') {
-        audioCtx.resume();
-      }
-
-      isPlaying = true;
+    if (!bgAudio) return;
+    bgAudio.play().then(() => {
       updateAudioUI(true);
-
-      // Bucle de reproducción suave
-      synthTimer = setInterval(() => {
-        playGentleNote(melodyNotes[currentNoteIndex]);
-        currentNoteIndex = (currentNoteIndex + 1) % melodyNotes.length;
-      }, 700);
-
-    } catch (err) {
-      console.log('Web Audio setup:', err);
-    }
+    }).catch(err => {
+      console.log('Audio autoplay prevented:', err);
+    });
   }
 
   function stopBackgroundMusic() {
-    if (!isPlaying) return;
-    isPlaying = false;
-    if (synthTimer) clearInterval(synthTimer);
+    if (!bgAudio) return;
+    bgAudio.pause();
     updateAudioUI(false);
+  }
+
+  function toggleBackgroundMusic() {
+    if (!bgAudio) return;
+    if (bgAudio.paused) {
+      startBackgroundMusic();
+    } else {
+      stopBackgroundMusic();
+    }
   }
 
   function updateAudioUI(playing) {
     if (playing) {
-      playIcon.classList.add('hidden');
-      pauseIcon.classList.remove('hidden');
-      equalizer.classList.add('playing');
+      if (playIcon) playIcon.classList.add('hidden');
+      if (pauseIcon) pauseIcon.classList.remove('hidden');
+      if (equalizer) equalizer.classList.add('playing');
     } else {
-      playIcon.classList.remove('hidden');
-      pauseIcon.classList.add('hidden');
-      equalizer.classList.remove('playing');
+      if (playIcon) playIcon.classList.remove('hidden');
+      if (pauseIcon) pauseIcon.classList.add('hidden');
+      if (equalizer) equalizer.classList.remove('playing');
     }
   }
 
   if (audioToggleBtn) {
-    audioToggleBtn.addEventListener('click', () => {
-      if (isPlaying) {
-        stopBackgroundMusic();
-      } else {
-        startBackgroundMusic();
-      }
-    });
+    audioToggleBtn.addEventListener('click', toggleBackgroundMusic);
+  }
+
+  if (bgAudio) {
+    bgAudio.addEventListener('play', () => updateAudioUI(true));
+    bgAudio.addEventListener('pause', () => updateAudioUI(false));
   }
 
   // ==========================================
