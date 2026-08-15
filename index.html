@@ -394,96 +394,140 @@
             </svg>
           </div>
 
-          <!-- SECCIÓN PADRES -->
-          <div class="family-block">
-            <h3 class="cursive-gold family-title">Padres</h3>
-            <img src="assets/images/Ba6.png" alt="Corazón Dorado" class="ba-gold-heart-mini">
-            <p class="family-names">
-              GILBER CHAVEZ<br>
-              CRISS DE LA CRUZ
-            </p>
-          </div>
-
-          <!-- SECCIÓN PADRINOS -->
-          <div class="family-block">
-            <h3 class="cursive-gold family-title">Padrinos</h3>
-            <img src="assets/images/Ba6.png" alt="Corazón Dorado" class="ba-gold-heart-mini">
-            <p class="family-names">
-              JOSELITO SANCHEZ MACHADO<br>
-              BEYTIA LLACTAHUAMANI ESPINOZA
-            </p>
+      <!-- ================= SECCIÓN 5: PADRES Y PADRINOS ================= -->
+      <div class="card-section section-family-container">
+        <!-- SECCIÓN PADRES -->
+        <div class="family-card-block">
+          <h3 class="cursive-gold family-title">Padres</h3>
+          <img src="assets/images/Ba6.png" alt="Corazón Dorado" class="ba-gold-heart-mini">
+          <div class="family-names-list">
+            <p class="family-member-name">GILBER CHAVEZ</p>
+            <p class="family-member-name">CRISS DE LA CRUZ</p>
           </div>
         </div>
 
-        <!-- SEPARADOR ELEGANTE CON GUIRNALDA FLORAL (Ba1.png) -->
-        <div class="luxury-section-divider">
-          <img src="assets/images/Ba1.png" alt="Guirnalda Floral Bautizo" class="ba-floral-divider-img">
+        <div class="family-divider-ornament">✦</div>
+
+        <!-- SECCIÓN PADRINOS -->
+        <div class="family-card-block">
+          <h3 class="cursive-gold family-title">Padrinos</h3>
+          <img src="assets/images/Ba6.png" alt="Corazón Dorado" class="ba-gold-heart-mini">
+          <div class="family-names-list">
+            <p class="family-member-name">JOSELITO SANCHEZ MACHADO</p>
+            <p class="family-member-name">BEYTIA LLACTAHUAMANI ESPINOZA</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SEPARADOR ELEGANTE CON GUIRNALDA FLORAL (Ba1.png) -->
+      <div class="luxury-section-divider">
+        <img src="assets/images/Ba1.png" alt="Guirnalda Floral Bautizo" class="ba-floral-divider-img">
+      </div>
+
+      <!-- ================= SECCIÓN 6: GALERÍA DE FOTOS ================= -->
+      <div class="card-section gallery-section" id="galeria">
+        <div class="gold-divider inline-divider">
+          <img src="assets/images/Ba5.png" alt="Ramita Floral Azul y Oro" class="ba-leaf-accent left">
+          <h3 class="gallery-heading serif-brown">Galería de Fotos</h3>
+          <img src="assets/images/Ba5.png" alt="Ramita Floral Azul y Oro" class="ba-leaf-accent right">
         </div>
 
-        <!-- SECCIÓN DE GALERÍA DE FOTOS -->
-        <div class="gallery-section" id="galeria">
-          <div class="gold-divider inline-divider">
-            <img src="assets/images/Ba5.png" alt="Ramita Floral Azul y Oro" class="ba-leaf-accent left">
-            <h3 class="gallery-heading serif-brown">Galería</h3>
-            <img src="assets/images/Ba5.png" alt="Ramita Floral Azul y Oro" class="ba-leaf-accent right">
-          </div>
-
-          <!-- Carrusel Interactivo de Fotos -->
-          <div class="carousel-container">
-            <button class="carousel-arrow prev" id="prevSlideBtn" aria-label="Imagen anterior">‹</button>
-            
-            <div class="carousel-viewport">
-              <div class="carousel-slides" id="carouselSlides">
-                <div class="slide active">
-                  <img src="assets/images/derek-retrato-principal.png?v=2026" alt="Derek Retrato Principal" class="gallery-img">
-                </div>
-                <div class="slide">
-                  <img src="assets/images/derek-rey-príncipe.png?v=2026" alt="Derek Rey Príncipe" class="gallery-img">
-                </div>
-                <div class="slide">
-                  <img src="assets/images/derek-sitio-arqueologico.png?v=2026" alt="Derek en Sitio Arqueológico" class="gallery-img">
-                </div>
-                <div class="slide">
-                  <img src="assets/images/derek-jugando-carrito.png?v=2026" alt="Derek Jugando Carrito" class="gallery-img">
-                </div>
-                <div class="slide">
-                  <img src="assets/images/derek-sonriendo-cerca.png?v=2026" alt="Derek Sonriente" class="gallery-img">
-                </div>
-                <div class="slide">
-                  <img src="assets/images/derek-paisaje-montana.png?v=2026" alt="Derek en la Montaña" class="gallery-img">
-                </div>
+        <!-- Carrusel Interactivo de Fotos con Touch / Swipe y Autoplay -->
+        <div class="carousel-container" id="carouselContainer">
+          <button class="carousel-arrow prev" id="prevSlideBtn" aria-label="Imagen anterior">‹</button>
+          
+          <div class="carousel-viewport" id="carouselViewport">
+            <div class="carousel-slides" id="carouselSlides">
+              <div class="slide active">
+                <img src="assets/images/baby-derek-2.png?v=2026" alt="Derek Bautizo Retrato Principal" class="gallery-img">
+              </div>
+              <div class="slide">
+                <img src="assets/images/baby-derek-1.png?v=2026" alt="Derek Sonriente" class="gallery-img">
+              </div>
+              <div class="slide">
+                <img src="assets/images/baby-derek-3.png?v=2026" alt="Derek Sentadito" class="gallery-img">
+              </div>
+              <div class="slide">
+                <img src="assets/images/baby-derek-4.png?v=2026" alt="Derek Traje Blanco Bautizo" class="gallery-img">
+              </div>
+              <div class="slide">
+                <img src="assets/images/derek-retrato-principal.png?v=2026" alt="Derek Rey" class="gallery-img">
+              </div>
+              <div class="slide">
+                <img src="assets/images/derek-rey-príncipe.png?v=2026" alt="Derek Príncipe" class="gallery-img">
               </div>
             </div>
-
-            <button class="carousel-arrow next" id="nextSlideBtn" aria-label="Imagen siguiente">›</button>
           </div>
 
-          <!-- Puntos de Navegación del Carrusel -->
-          <div class="carousel-dots" id="carouselDots">
-            <span class="dot active" data-index="0"></span>
-            <span class="dot" data-index="1"></span>
-            <span class="dot" data-index="2"></span>
-            <span class="dot" data-index="3"></span>
-            <span class="dot" data-index="4"></span>
-            <span class="dot" data-index="5"></span>
-          </div>
+          <button class="carousel-arrow next" id="nextSlideBtn" aria-label="Imagen siguiente">›</button>
         </div>
 
-        <!-- SEPARADOR ELEGANTE CON GUIRNALDA FLORAL (Ba1.png) -->
-        <div class="luxury-section-divider">
-          <img src="assets/images/Ba1.png" alt="Guirnalda Floral Bautizo" class="ba-floral-divider-img">
+        <!-- Puntos de Navegación del Carrusel -->
+        <div class="carousel-dots" id="carouselDots">
+          <span class="dot active" data-index="0"></span>
+          <span class="dot" data-index="1"></span>
+          <span class="dot" data-index="2"></span>
+          <span class="dot" data-index="3"></span>
+          <span class="dot" data-index="4"></span>
+          <span class="dot" data-index="5"></span>
         </div>
+      </div>
 
-        <!-- SECCIÓN CÓDIGO DE VESTIMENTA -->
-        <div class="dresscode-section">
-          <h3 class="dresscode-title serif-brown">Código de Vestimenta</h3>
-          <div class="dresscode-box">
-            <svg class="bowtie-svg" viewBox="0 0 60 40" fill="#AA771C">
-              <path d="M10 10 L26 18 V22 L10 30 Z M50 10 L34 18 V22 L50 30 Z M26 16 H34 V24 H26 Z" stroke="#8C5638" stroke-width="1.5"/>
-              <circle cx="30" cy="20" r="4" fill="#D4AF37"/>
+      <!-- SEPARADOR ELEGANTE CON GUIRNALDA FLORAL (Ba1.png) -->
+      <div class="luxury-section-divider">
+        <img src="assets/images/Ba1.png" alt="Guirnalda Floral Bautizo" class="ba-floral-divider-img">
+      </div>
+
+      <!-- ================= SECCIÓN 7: CÓDIGO DE VESTIMENTA ================= -->
+      <div class="card-section section-dresscode-block">
+        <h2 class="section-title cursive-gold">Código de Vestimenta</h2>
+        
+        <div class="dresscode-detailed-card">
+          <div class="dresscode-icon-circle">
+            <svg class="bowtie-luxury-svg" viewBox="0 0 64 64" fill="none">
+              <path d="M14 18 L32 28 L50 18 L42 48 H22 Z" fill="#183359" stroke="#C5A046" stroke-width="2"/>
+              <path d="M28 26 L32 20 L36 26 L34 42 H30 Z" fill="#C5A046"/>
+              <circle cx="32" cy="20" r="3.5" fill="#FFFDF8" stroke="#C5A046" stroke-width="1.5"/>
             </svg>
-            <span class="dresscode-text">Formal</span>
           </div>
+          
+          <h3 class="dresscode-main-type">FORMAL & ELEGANTE</h3>
+          
+          <div class="dresscode-palette-hint">
+            <span class="color-swatch navy" title="Azul Rey"></span>
+            <span class="color-swatch gold" title="Dorado"></span>
+            <span class="color-swatch white" title="Blanco"></span>
+            <span class="color-swatch pastel" title="Pastel"></span>
+          </div>
+
+          <p class="dresscode-recommendation">
+            Agradecemos acompañarnos luciendo traje formal o vestido elegante acorde a esta inolvidable celebración.
+          </p>
+        </div>
+      </div>
+
+      <!-- SEPARADOR ELEGANTE CON GUIRNALDA FLORAL (Ba1.png) -->
+      <div class="luxury-section-divider">
+        <img src="assets/images/Ba1.png" alt="Guirnalda Floral Bautizo" class="ba-floral-divider-img">
+      </div>
+
+      <!-- ================= SECCIÓN 8: CONFIRMACIÓN DE ASISTENCIA (RSVP GRAND CTA) ================= -->
+      <div class="card-section section-rsvp-grand" id="confirmar">
+        <h2 class="section-title cursive-gold">Confirmación de Asistencia</h2>
+        
+        <p class="rsvp-invitation-subtext">
+          Tu presencia es nuestro mayor regalo.<br>
+          Por favor confirma tu presencia antes del <strong>20 de Agosto de 2026</strong>.
+        </p>
+
+        <div class="rsvp-cta-wrapper">
+          <button class="btn-rsvp-luxury" id="openRsvpBtn">
+            <span class="btn-rsvp-pulse-glow"></span>
+            <svg class="btn-rsvp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            <span class="btn-rsvp-text">CONFIRMAR ASISTENCIA AQUÍ</span>
+          </button>
         </div>
 
         <!-- MENSAJE DE AGRADECIMIENTO FINAL -->
@@ -497,16 +541,7 @@
             <span class="leaf-branch right"></span>
           </div>
         </div>
-
-        <!-- BOTÓN DE CONFIRMACIÓN DE ASISTENCIA (AL FINAL DE LA TARJETA) -->
-        <div class="cta-container bottom-cta">
-          <button class="btn-rsvp" id="openRsvpBtn">
-            <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z"/>
-            </svg>
-            <span>CONFIRMAR ASISTENCIA</span>
-          </button>
-        </div>
+      </div>
 
       </div>
 

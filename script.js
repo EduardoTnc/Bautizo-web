@@ -211,11 +211,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function startAutoSlide() {
     stopAutoSlide();
-    autoSlideTimer = setInterval(nextSlide, 3500);
+    autoSlideTimer = setInterval(nextSlide, 2600);
   }
 
   function stopAutoSlide() {
     if (autoSlideTimer) clearInterval(autoSlideTimer);
+  }
+
+  // Pausar auto-desplazamiento al tocar o pasar el cursor sobre el carrusel
+  const carouselViewport = document.getElementById('carouselViewport');
+  if (carouselViewport) {
+    carouselViewport.addEventListener('mouseenter', stopAutoSlide);
+    carouselViewport.addEventListener('mouseleave', startAutoSlide);
   }
 
   if (nextSlideBtn) {
@@ -240,25 +247,54 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Gestos táctiles de deslizamiento (Swipe en Móviles)
+  // Gestos táctiles y deslizamiento suave (Swipe en Móviles / Drag en Desktop)
   let touchStartX = 0;
   let touchEndX = 0;
+  let isDragging = false;
 
   if (carouselSlides) {
     carouselSlides.addEventListener('touchstart', (e) => {
-      touchStartX = e.changedTouches[0].screenX;
+      touchStartX = e.changedTouches[0].clientX;
       stopAutoSlide();
     }, { passive: true });
 
     carouselSlides.addEventListener('touchend', (e) => {
-      touchEndX = e.changedTouches[0].screenX;
-      if (touchStartX - touchEndX > 40) {
-        nextSlide(); // Swipe izquierda -> Siguiente
-      } else if (touchEndX - touchStartX > 40) {
-        prevSlide(); // Swipe derecha -> Anterior
+      touchEndX = e.changedTouches[0].clientX;
+      const diffX = touchStartX - touchEndX;
+      if (diffX > 35) {
+        nextSlide();
+      } else if (diffX < -35) {
+        prevSlide();
       }
       startAutoSlide();
     }, { passive: true });
+
+    // Drag con mouse para Desktop
+    carouselSlides.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      touchStartX = e.clientX;
+      stopAutoSlide();
+    });
+
+    carouselSlides.addEventListener('mouseup', (e) => {
+      if (!isDragging) return;
+      isDragging = false;
+      touchEndX = e.clientX;
+      const diffX = touchStartX - touchEndX;
+      if (diffX > 35) {
+        nextSlide();
+      } else if (diffX < -35) {
+        prevSlide();
+      }
+      startAutoSlide();
+    });
+
+    carouselSlides.addEventListener('mouseleave', () => {
+      if (isDragging) {
+        isDragging = false;
+        startAutoSlide();
+      }
+    });
   }
 
   // Abrir vista ampliada (Lightbox) al hacer clic en cualquier imagen
