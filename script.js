@@ -304,33 +304,42 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Abrir vista ampliada (Lightbox) al hacer clic en cualquier imagen
-  slides.forEach(slide => {
-    slide.addEventListener('click', () => {
-      const img = slide.querySelector('img');
+  // Abrir vista ampliada (Lightbox) al hacer clic en cualquier imagen del carrusel de fotos
+  const galleryImages = document.querySelectorAll('.marquee-slide, .marquee-img, .baby-photo');
+  const lightboxOverlay = document.getElementById('lightboxOverlay');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxClose = document.getElementById('lightboxClose');
+
+  galleryImages.forEach(item => {
+    item.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const img = item.tagName.toLowerCase() === 'img' ? item : item.querySelector('img');
       if (img && lightboxOverlay && lightboxImg) {
         lightboxImg.src = img.src;
         lightboxOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
       }
     });
   });
 
-  if (lightboxClose) {
-    lightboxClose.addEventListener('click', () => {
+  function closeLightbox() {
+    if (lightboxOverlay) {
       lightboxOverlay.classList.remove('active');
-    });
+      document.body.style.overflow = '';
+    }
+  }
+
+  if (lightboxClose) {
+    lightboxClose.addEventListener('click', closeLightbox);
   }
 
   if (lightboxOverlay) {
     lightboxOverlay.addEventListener('click', (e) => {
-      if (e.target === lightboxOverlay) {
-        lightboxOverlay.classList.remove('active');
+      if (e.target === lightboxOverlay || e.target === lightboxClose) {
+        closeLightbox();
       }
     });
   }
-
-  // Iniciar deslizamiento automático
-  startAutoSlide();
 
   // ==========================================
   // 6. MODAL RSVP Y WHATSAPP INTEGRACIÓN
