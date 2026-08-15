@@ -91,12 +91,22 @@ body {
 /* ========================================== */
 /* SOBRE INTERACTIVO DE APERTURA (ENVELOPE)   */
 /* ========================================== */
+body.unopened-locked {
+  overflow: hidden !important;
+  height: 100vh !important;
+  height: 100dvh !important;
+  touch-action: none;
+  position: fixed;
+  width: 100%;
+}
+
 .envelope-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
+  height: 100dvh;
   background-color: #E8F1FA;
   background-image: 
     radial-gradient(#C5DCF0 0.8px, transparent 0.8px),
@@ -109,8 +119,9 @@ body {
   justify-content: center;
   align-items: center;
   transition: opacity 0.8s ease, visibility 0.8s ease;
-  overflow-y: auto;
-  padding: 20px 10px;
+  overflow: hidden !important;
+  touch-action: none;
+  padding: 10px;
 }
 
 .envelope-overlay.opened {
@@ -123,11 +134,16 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
+  justify-content: space-between;
   max-width: 440px;
   width: 100%;
+  height: 100%;
+  max-height: 98dvh;
   position: relative;
   margin: auto;
+  padding: 8px 5px;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 /* 🎠 CARRUSEL ANIMADO 3D QUE DA VUELTAS (B4.png) */
@@ -163,21 +179,23 @@ body {
 }
 
 .carousel-3d-img {
-  width: 230px;
-  max-width: 85vw;
+  width: auto;
+  max-width: 80vw;
+  max-height: 22dvh;
   height: auto;
   filter: drop-shadow(0 14px 30px rgba(26, 54, 93, 0.25));
 }
 
 /* ✒️ TÍTULO DEREK CHAVEZ DE LA CRUZ (B3.png) */
 .envelope-header-brand {
-  margin: 5px 0 15px;
+  margin: 4px 0 8px;
   text-align: center;
 }
 
 .derek-title-img {
-  width: 280px;
-  max-width: 85vw;
+  width: auto;
+  max-width: 80vw;
+  max-height: 9dvh;
   height: auto;
   filter: drop-shadow(0 3px 8px rgba(43, 76, 126, 0.15));
 }

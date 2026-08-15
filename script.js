@@ -26,9 +26,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let envelopeOpened = false;
 
+  // Bloquear scroll mientras el sobre esté cerrado
+  if (envelopeOverlay && !envelopeOpened) {
+    document.body.classList.add('unopened-locked');
+  }
+
   function openEnvelope() {
     if (envelopeOpened) return;
     envelopeOpened = true;
+
+    // Desbloquear scroll del cuerpo al abrir
+    document.body.classList.remove('unopened-locked');
 
     // Asegurar que la pantalla comience desde arriba de la invitación
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
@@ -44,6 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Desvanecer overlay después de abrir la tarjeta
     setTimeout(() => {
       envelopeOverlay.classList.add('opened');
+      document.body.classList.remove('unopened-locked');
       window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
       document.documentElement.scrollTop = 0;
       document.body.scrollTop = 0;
