@@ -925,47 +925,62 @@ body {
   color: var(--brown-dark);
 }
 
-/* CONTADOR REGRESIVO */
-.countdown-section {
-  margin-top: 18px;
-  padding-top: 14px;
-  border-top: 1px dashed rgba(212, 175, 55, 0.4);
+/* SECCIÓN CONTADOR REGRESIVO DESTACADO Y GRANDE */
+.section-countdown-block {
   text-align: center;
+  padding: 15px 0;
 }
 
-.countdown-label {
-  font-size: 0.8rem;
-  color: var(--brown-text);
-  font-weight: 600;
-  margin-bottom: 8px;
+.countdown-section {
+  margin: 20px auto 10px;
+  padding: 5px 0;
+  text-align: center;
+  width: 100%;
 }
 
 .timer-grid {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  align-items: center;
+  gap: 12px;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 .timer-box {
-  background: #FFF;
-  border: 1px solid var(--gold-light);
-  border-radius: 8px;
-  padding: 6px 10px;
-  min-width: 50px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+  background: linear-gradient(135deg, #FFFFFF 0%, #F4F8FC 100%);
+  border: 1.5px solid var(--gold-primary);
+  border-radius: 16px;
+  padding: 14px 10px;
+  min-width: 70px;
+  flex: 1;
+  box-shadow: 0 8px 22px rgba(24, 51, 89, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timer-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(24, 51, 89, 0.18);
+  border-color: #D4AF37;
 }
 
 .timer-box span {
   display: block;
-  font-size: 1.1rem;
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
   font-weight: 700;
-  color: var(--brown-dark);
+  color: var(--blue-primary);
+  line-height: 1;
+  margin-bottom: 4px;
 }
 
 .timer-box small {
-  font-size: 0.65rem;
-  color: var(--brown-text);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--gold-primary);
   text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 /* Línea Punteada */
