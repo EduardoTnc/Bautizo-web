@@ -754,22 +754,23 @@ body.unopened-locked {
 }
 
 .main-title {
-  font-size: 3.6rem;
-  margin-bottom: 2px;
-  color: var(--gold-primary);
-  font-family: var(--font-serif);
-  font-weight: 700;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
+  font-family: var(--font-cursive);
+  font-size: 2.8rem;
+  margin-bottom: -2px;
+  color: var(--blue-primary);
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: none;
+  line-height: 1.1;
 }
 
 .sub-title {
   font-family: var(--font-cursive);
-  font-size: 3.2rem;
+  font-size: 2.1rem;
   font-weight: 400;
-  color: var(--blue-primary);
-  margin-bottom: 18px;
-  line-height: 1.15;
+  color: var(--gold-primary);
+  margin-bottom: 10px;
+  line-height: 1.1;
 }
 
 .serif-brown {
