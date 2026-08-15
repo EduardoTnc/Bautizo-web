@@ -198,10 +198,11 @@ body.unopened-locked {
 
 .carousel-3d-img {
   width: auto;
-  max-width: 82vw;
-  max-height: 23dvh;
+  max-width: 90vw;
+  max-height: 30dvh;
   height: auto;
-  filter: drop-shadow(0 16px 32px rgba(24, 51, 89, 0.28)) drop-shadow(0 0 16px rgba(197, 160, 70, 0.35));
+  transform: scale(1.12);
+  filter: drop-shadow(0 18px 36px rgba(24, 51, 89, 0.32)) drop-shadow(0 0 20px rgba(197, 160, 70, 0.45));
 }
 
 /* ✒️ TÍTULO DEREK CHAVEZ DE LA CRUZ (B3.png) */
@@ -1031,11 +1032,14 @@ body.unopened-locked {
 /* Frase Espiritual */
 .spiritual-quote {
   font-family: var(--font-serif);
-  font-size: 1.05rem;
+  font-size: 1.35rem;
+  font-weight: 600;
   font-style: italic;
-  color: var(--brown-text);
-  line-height: 1.5;
-  margin: 15px 10px;
+  color: var(--blue-primary);
+  line-height: 1.6;
+  margin: 18px 12px;
+  letter-spacing: 0.3px;
+  text-shadow: 0 1px 3px rgba(24, 51, 89, 0.08);
 }
 
 .cross-emblem {
