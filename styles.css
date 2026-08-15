@@ -691,9 +691,17 @@ body.unopened-locked {
 /* ========================================== */
 /* PORTADA                                    */
 /* ========================================== */
+.section-header {
+  padding: 25px 15px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
 /* ÁNGEL DE BAUTIZO ADORNO PRINCIPAL (bautizo 3.png) */
 .angel-hero-container {
-  margin: 5px auto 10px;
+  margin: 10px auto 18px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -702,9 +710,9 @@ body.unopened-locked {
 }
 
 .angel-hero-img {
-  width: 140px;
+  width: 155px;
   height: auto;
-  filter: drop-shadow(0 8px 22px rgba(59, 126, 189, 0.28));
+  filter: drop-shadow(0 10px 25px rgba(59, 126, 189, 0.32));
   animation: floatAngel 4s ease-in-out infinite alternate;
   transition: transform 0.3s ease;
 }
@@ -746,21 +754,22 @@ body.unopened-locked {
 }
 
 .main-title {
-  font-size: 3.5rem;
-  margin-bottom: -5px;
+  font-size: 3.6rem;
+  margin-bottom: 2px;
   color: var(--gold-primary);
   font-family: var(--font-serif);
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 2.5px;
   text-transform: uppercase;
 }
 
 .sub-title {
   font-family: var(--font-cursive);
-  font-size: 2.8rem;
+  font-size: 3.2rem;
   font-weight: 400;
   color: var(--blue-primary);
-  margin-bottom: 12px;
+  margin-bottom: 18px;
+  line-height: 1.15;
 }
 
 .serif-brown {
@@ -775,8 +784,8 @@ body.unopened-locked {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  margin: 15px auto;
+  gap: 12px;
+  margin: 18px auto 25px;
   width: 80%;
 }
 
@@ -806,7 +815,7 @@ body.unopened-locked {
 
 /* Marco Ovalado y Retrato */
 .portrait-container {
-  margin: 20px auto;
+  margin: 28px auto 32px;
   display: flex;
   justify-content: center;
 }
