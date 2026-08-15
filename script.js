@@ -95,7 +95,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function startBackgroundMusic() {
     if (!bgAudio) return;
-    bgAudio.volume = 0.8;
+    bgAudio.muted = false;
+    bgAudio.volume = 0.85;
     const playPromise = bgAudio.play();
     if (playPromise !== undefined) {
       playPromise.then(() => {
@@ -103,9 +104,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }).catch(err => {
         console.log('Autoplay restricted by browser:', err);
         const enableAudioOnTouch = () => {
+          bgAudio.muted = false;
           bgAudio.play().then(() => updateAudioUI(true)).catch(e => console.log(e));
-          window.removeEventListener('click', enableAudioOnTouch);
-          window.removeEventListener('touchstart', enableAudioOnTouch);
         };
         window.addEventListener('click', enableAudioOnTouch, { once: true });
         window.addEventListener('touchstart', enableAudioOnTouch, { once: true });
