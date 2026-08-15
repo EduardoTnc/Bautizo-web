@@ -181,47 +181,51 @@ body.unopened-locked {
 
 .carousel-spinning-wrapper {
   transform-style: preserve-3d;
-  animation: rotateCarousel3D 10s ease-in-out infinite alternate;
+  animation: rotateCarousel3D 7s ease-in-out infinite alternate;
 }
 
 @keyframes rotateCarousel3D {
   0% {
-    transform: rotateY(-22deg) translateY(0px) scale(1);
-  }
-  25% {
-    transform: rotateY(22deg) translateY(-8px) scale(1.04);
+    transform: rotateY(-18deg) translateY(0px) scale(1);
   }
   50% {
-    transform: rotateY(-22deg) translateY(0px) scale(1);
-  }
-  75% {
-    transform: rotateY(22deg) translateY(-8px) scale(1.04);
+    transform: rotateY(18deg) translateY(-10px) scale(1.04);
   }
   100% {
-    transform: rotateY(-22deg) translateY(0px) scale(1);
+    transform: rotateY(-18deg) translateY(0px) scale(1);
   }
 }
 
 .carousel-3d-img {
   width: auto;
-  max-width: 80vw;
-  max-height: 22dvh;
+  max-width: 82vw;
+  max-height: 23dvh;
   height: auto;
-  filter: drop-shadow(0 14px 30px rgba(26, 54, 93, 0.25));
+  filter: drop-shadow(0 16px 32px rgba(24, 51, 89, 0.28)) drop-shadow(0 0 16px rgba(197, 160, 70, 0.35));
 }
 
 /* ✒️ TÍTULO DEREK CHAVEZ DE LA CRUZ (B3.png) */
 .envelope-header-brand {
-  margin: 4px 0 8px;
+  margin: 6px 0 10px;
   text-align: center;
 }
 
 .derek-title-img {
   width: auto;
-  max-width: 80vw;
-  max-height: 9dvh;
+  max-width: 82vw;
+  max-height: 9.5dvh;
   height: auto;
-  filter: drop-shadow(0 3px 8px rgba(43, 76, 126, 0.15));
+  filter: drop-shadow(0 4px 12px rgba(24, 51, 89, 0.2));
+  animation: logoPulse 4s ease-in-out infinite alternate;
+}
+
+@keyframes logoPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
 }
 
 .envelope-wrapper {
@@ -230,6 +234,16 @@ body.unopened-locked {
   position: relative;
   width: 100%;
   max-width: 340px;
+  animation: envelopeBreathe 6s ease-in-out infinite alternate;
+}
+
+@keyframes envelopeBreathe {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-6px) rotate(0.6deg);
+  }
 }
 
 .envelope {
@@ -238,11 +252,17 @@ body.unopened-locked {
   height: 220px;
   background: #8CAECB;
   border-radius: 8px;
-  box-shadow: 0 20px 45px rgba(26, 54, 93, 0.25);
+  box-shadow: 0 24px 50px rgba(26, 54, 93, 0.3);
   border: 1px solid #7B9DBA;
   margin: 0 auto;
   cursor: pointer;
   transform-style: preserve-3d;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.envelope:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 28px 55px rgba(26, 54, 93, 0.38);
 }
 
 .pocket {
@@ -340,10 +360,16 @@ body.unopened-locked {
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: sealPulse 2.5s ease-in-out infinite alternate;
 }
 
-.wax-seal-container:hover {
-  transform: translate(-50%, -35%) scale(1.08);
+@keyframes sealPulse {
+  0% {
+    transform: translate(-50%, -35%) scale(1);
+  }
+  100% {
+    transform: translate(-50%, -35%) scale(1.08);
+  }
 }
 
 .envelope.open .wax-seal-container,
@@ -357,7 +383,7 @@ body.unopened-locked {
 .seal-img {
   width: 86px;
   height: 86px;
-  filter: drop-shadow(0 8px 18px rgba(180, 135, 30, 0.55));
+  filter: drop-shadow(0 8px 20px rgba(197, 160, 70, 0.65));
 }
 
 .curved-text-svg {
@@ -367,6 +393,17 @@ body.unopened-locked {
   width: 150px;
   height: 150px;
   pointer-events: none;
+  animation: spinCurvedText 14s linear infinite;
+  transform-origin: center center;
+}
+
+@keyframes spinCurvedText {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* 🎠 CABALLO GALLOPANTE DE CARRUSEL (B1.png) */
@@ -377,8 +414,8 @@ body.unopened-locked {
   width: 135px;
   height: auto;
   z-index: 12;
-  filter: drop-shadow(0 8px 18px rgba(26, 54, 93, 0.25));
-  animation: horseGallopBounce 3.5s ease-in-out infinite alternate;
+  filter: drop-shadow(0 8px 20px rgba(24, 51, 89, 0.28));
+  animation: horseGallopBounce 3s ease-in-out infinite alternate;
   pointer-events: none;
 }
 
@@ -387,7 +424,7 @@ body.unopened-locked {
     transform: translateY(0) rotate(0deg);
   }
   50% {
-    transform: translateY(-12px) rotate(4deg);
+    transform: translateY(-15px) rotate(5deg);
   }
   100% {
     transform: translateY(0) rotate(0deg);
@@ -400,19 +437,31 @@ body.unopened-locked {
   bottom: -32px;
   right: -25px;
   z-index: 12;
-  transform: rotate(2deg);
+  animation: miniCardFloat 3.5s ease-in-out infinite alternate;
+}
+
+@keyframes miniCardFloat {
+  0% {
+    transform: rotate(2deg) translateY(0);
+  }
+  50% {
+    transform: rotate(-1deg) translateY(-8px);
+  }
+  100% {
+    transform: rotate(2deg) translateY(0);
+  }
 }
 
 .mini-card-img {
   width: 220px;
   height: auto;
   border-radius: 6px;
-  box-shadow: 0 10px 25px rgba(26, 54, 93, 0.22);
+  box-shadow: 0 12px 28px rgba(24, 51, 89, 0.26);
 }
 
 /* 🖋️ MI BAUTIZO FOOTER (B5.png) */
 .envelope-footer-brand {
-  margin-top: 45px;
+  margin-top: 35px;
   text-align: center;
 }
 
@@ -420,7 +469,19 @@ body.unopened-locked {
   width: 230px;
   max-width: 80vw;
   height: auto;
-  filter: drop-shadow(0 3px 8px rgba(43, 76, 126, 0.15));
+  filter: drop-shadow(0 4px 10px rgba(24, 51, 89, 0.2));
+  animation: footerGlow 3.5s ease-in-out infinite alternate;
+}
+
+@keyframes footerGlow {
+  0% {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.04);
+  }
 }
 
 /* ========================================== */
