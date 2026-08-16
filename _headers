@@ -1,13 +1,17 @@
+# Configuración Eficiente de Caché: Ancho de Banda Protegido + Actualizaciones Inmediatas
+
+# HTML y Páginas Principales (Verificación Instantánea con 0 Ancho de Banda)
 /*
-  Cache-Control: no-cache, no-store, must-revalidate
-  Pragma: no-cache
-  Expires: 0
+  Cache-Control: public, max-age=0, must-revalidate
 
-/*.html
-  Cache-Control: no-cache, no-store, must-revalidate
-
+# Hojas de Estilo y Scripts (Validación de Versión)
 /*.css
-  Cache-Control: no-cache, no-store, must-revalidate
+  Cache-Control: public, max-age=0, must-revalidate
 
 /*.js
-  Cache-Control: no-cache, no-store, must-revalidate
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Recursos Multimedia (Imágenes, Videos y Audio)
+# Almacenamiento Caché Eficiente en Navegador para Ahorrar Ancho de Banda de Netlify
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
