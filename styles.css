@@ -876,22 +876,24 @@ body.unopened-locked {
 
 .main-title {
   font-family: var(--font-cursive);
-  font-size: 2.8rem;
-  margin-bottom: -2px;
+  font-size: 3.8rem;
+  margin-bottom: -4px;
   color: var(--blue-primary);
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 1px;
   text-transform: none;
   line-height: 1.1;
+  text-shadow: 0 2px 5px rgba(24, 51, 89, 0.15);
 }
 
 .sub-title {
   font-family: var(--font-cursive);
-  font-size: 2.1rem;
-  font-weight: 400;
+  font-size: 3.0rem;
+  font-weight: 500;
   color: var(--gold-primary);
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   line-height: 1.1;
+  text-shadow: 0 2px 4px rgba(197, 160, 70, 0.2);
 }
 
 .serif-brown {
