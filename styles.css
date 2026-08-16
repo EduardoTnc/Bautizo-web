@@ -2,22 +2,24 @@
 /* ESTILOS GLOBALES Y VARIABLES DE DISEÑO     */
 /* ========================================== */
 :root {
-  --bg-parchment: #EBF3FA;
-  --bg-card: #FFFFFF;
-  --bg-soft-cream: #F2F7FC;
+  --bg-parchment: #E2EFF9;
+  --bg-card: linear-gradient(180deg, #FFFFFF 0%, #F2F7FD 35%, #E3EFFB 100%);
+  --bg-soft-cream: #E8F2FA;
   --gold-primary: #C5A046;   /* Metallic Gold from reference image headers */
   --gold-dark: #A6832A;
   --gold-light: #F4E8C1;
-  --blue-primary: #183359;   /* Deep Royal Navy from reference image calligraphy */
+  --blue-primary: #1C3E6E;   /* Deep Royal Navy from reference image calligraphy */
   --blue-dark: #0F223D;
-  --blue-light: #5B7B9A;
-  --brown-text: #183359;     /* Deep Royal Navy script & accent */
+  --blue-light: #6A96C2;
+  --blue-celeste-soft: #D0E4F7;
+  --blue-celeste-pastel: #E2EFF9;
+  --brown-text: #1C3E6E;     /* Deep Royal Navy script & accent */
   --brown-dark: #0F223D;     /* Midnight Navy */
   --brown-light: #5B7B9A;    /* Muted watercolor blue */
-  --btn-cta: #1A3A68;        /* Deep Royal Blue CTA button */
-  --btn-cta-hover: #102444;  /* Midnight navy hover */
-  --shadow-soft: 0 10px 30px rgba(24, 51, 89, 0.12);
-  --shadow-card: 0 15px 40px rgba(15, 34, 61, 0.15);
+  --btn-cta: #234E82;        /* Elegant Pastel Royal Blue CTA button */
+  --btn-cta-hover: #153256;  /* Midnight navy hover */
+  --shadow-soft: 0 10px 30px rgba(28, 62, 110, 0.12);
+  --shadow-card: 0 20px 50px rgba(28, 62, 110, 0.18);
   --font-cursive: 'Great Vibes', 'Alex Brush', cursive;
   --font-serif: 'Cormorant Garamond', Georgia, serif;
   --font-sans: 'Montserrat', sans-serif;
@@ -36,10 +38,10 @@ html {
 body {
   background-color: var(--bg-parchment);
   background-image: 
-    radial-gradient(#CBDDF2 0.75px, transparent 0.75px),
-    radial-gradient(#CBDDF2 0.75px, #F2F7FC 0.75px);
-  background-size: 30px 30px;
-  background-position: 0 0, 15px 15px;
+    radial-gradient(#B6D5F2 0.8px, transparent 0.8px),
+    radial-gradient(#B6D5F2 0.8px, #ECF4FB 0.8px);
+  background-size: 28px 28px;
+  background-position: 0 0, 14px 14px;
   font-family: var(--font-sans);
   color: var(--brown-dark);
   min-height: 100vh;
@@ -131,10 +133,10 @@ body.unopened-locked {
   width: 100vw;
   height: 100vh;
   height: 100dvh;
-  background-color: #E8F1FA;
+  background-color: #DDEBF7;
   background-image: 
-    radial-gradient(#C5DCF0 0.8px, transparent 0.8px),
-    radial-gradient(#C5DCF0 0.8px, #E8F1FA 0.8px);
+    radial-gradient(#B0D2F0 0.9px, transparent 0.9px),
+    radial-gradient(#B0D2F0 0.9px, #E8F2FB 0.9px);
   background-size: 24px 24px;
   background-position: 0 0, 12px 12px;
   backdrop-filter: blur(8px);
