@@ -1,17 +1,17 @@
-# Configuración Eficiente de Caché: Ancho de Banda Protegido + Actualizaciones Inmediatas
+# Configuración Eficiente de Servidor y Cabeceras Open Graph para WhatsApp
 
-# HTML y Páginas Principales (Verificación Instantánea con 0 Ancho de Banda)
+# HTML y Páginas Principales
 /*
   Cache-Control: public, max-age=0, must-revalidate
+  Access-Control-Allow-Origin: *
 
-# Hojas de Estilo y Scripts (Validación de Versión)
 /*.css
   Cache-Control: public, max-age=0, must-revalidate
 
 /*.js
   Cache-Control: public, max-age=0, must-revalidate
 
-# Recursos Multimedia (Imágenes, Videos y Audio)
-# Almacenamiento Caché Eficiente en Navegador para Ahorrar Ancho de Banda de Netlify
+# Recursos Multimedia e Imágenes de Vista Previa (Permite Crawling en WhatsApp y Redes Sociales)
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
+  Access-Control-Allow-Origin: *
