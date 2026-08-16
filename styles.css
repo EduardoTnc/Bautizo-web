@@ -1109,7 +1109,7 @@ body.unopened-locked {
   background: linear-gradient(135deg, #FFFFFF 0%, #F4F8FC 100%);
   border: 1.5px solid var(--gold-primary);
   border-radius: 20px;
-  box-shadow: 0 8px 25px rgba(24, 51, 89, 0.12);
+  box-shadow: 0 8px 24px rgba(24, 51, 89, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -1278,13 +1278,13 @@ body.unopened-locked {
 }
 
 .timer-box {
-  background: #EAF3FB;
+  background: linear-gradient(135deg, #FFFFFF 0%, #F4F8FC 100%);
   border: 1.5px solid var(--gold-primary);
   border-radius: 16px;
   padding: 14px 10px;
   min-width: 70px;
   flex: 1;
-  box-shadow: 0 8px 22px rgba(24, 51, 89, 0.12);
+  box-shadow: 0 8px 24px rgba(24, 51, 89, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -1330,7 +1330,7 @@ body.unopened-locked {
 }
 
 .family-card-block {
-  background: #EAF3FB;
+  background: linear-gradient(135deg, #FFFFFF 0%, #F4F8FC 100%);
   border: 1.5px solid var(--gold-primary);
   border-radius: 18px;
   padding: 20px 24px;
@@ -1401,7 +1401,7 @@ body.unopened-locked {
   position: relative;
   border-radius: 24px;
   box-shadow: 0 12px 32px rgba(24, 51, 89, 0.16);
-  background: #EAF3FB;
+  background: linear-gradient(135deg, #FFFFFF 0%, #F4F8FC 100%);
   padding: 18px 0;
   mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
   -webkit-mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
@@ -1502,13 +1502,13 @@ body.unopened-locked {
 }
 
 .dresscode-detailed-card {
-  background: #EAF3FB;
+  background: linear-gradient(135deg, #FFFFFF 0%, #F4F8FC 100%);
   border: 1.5px solid var(--gold-primary);
   border-radius: 20px;
   padding: 24px 20px;
   max-width: 380px;
   margin: 15px auto 0;
-  box-shadow: 0 8px 25px rgba(24, 51, 89, 0.12);
+  box-shadow: 0 8px 24px rgba(24, 51, 89, 0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
