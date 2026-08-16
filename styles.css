@@ -896,8 +896,8 @@ body.unopened-locked {
 
 .serif-brown {
   font-family: var(--font-serif);
-  color: var(--gold-primary);
-  font-weight: 600;
+  color: var(--blue-primary);
+  font-weight: 700;
   letter-spacing: 1px;
 }
 
@@ -1060,10 +1060,14 @@ body.unopened-locked {
 /* DETALLES DEL EVENTO Y CENTRADO PERFECCIONADO */
 /* ========================================== */
 .welcome-heading {
-  font-size: 1.35rem;
-  font-weight: 600;
-  line-height: 1.3;
-  margin-top: 5px;
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--blue-primary);
+  line-height: 1.35;
+  margin: 10px auto 6px;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
 }
 
 .mini-divider {
