@@ -2,8 +2,8 @@
 /* ESTILOS GLOBALES Y VARIABLES DE DISEÑO     */
 /* ========================================== */
 :root {
-  --bg-parchment: #E2EFF9;
-  --bg-card: linear-gradient(180deg, #FFFFFF 0%, #F2F7FD 35%, #E3EFFB 100%);
+  --bg-parchment: #DCE8F5;
+  --bg-card: #E4EFF9;        /* Solid Soft Pastel Celeste - Sin degradado */
   --bg-soft-cream: #E8F2FA;
   --gold-primary: #C5A046;   /* Metallic Gold from reference image headers */
   --gold-dark: #A6832A;
@@ -12,7 +12,7 @@
   --blue-dark: #0F223D;
   --blue-light: #6A96C2;
   --blue-celeste-soft: #D0E4F7;
-  --blue-celeste-pastel: #E2EFF9;
+  --blue-celeste-pastel: #E4EFF9;
   --brown-text: #1C3E6E;     /* Deep Royal Navy script & accent */
   --brown-dark: #0F223D;     /* Midnight Navy */
   --brown-light: #5B7B9A;    /* Muted watercolor blue */
@@ -1274,7 +1274,7 @@ body.unopened-locked {
 }
 
 .timer-box {
-  background: linear-gradient(135deg, #FFFFFF 0%, #F4F8FC 100%);
+  background: #EAF3FB;
   border: 1.5px solid var(--gold-primary);
   border-radius: 16px;
   padding: 14px 10px;
@@ -1326,7 +1326,7 @@ body.unopened-locked {
 }
 
 .family-card-block {
-  background: linear-gradient(135deg, #FFFFFF 0%, #F4F8FC 100%);
+  background: #EAF3FB;
   border: 1.5px solid var(--gold-primary);
   border-radius: 18px;
   padding: 20px 24px;
@@ -1397,7 +1397,7 @@ body.unopened-locked {
   position: relative;
   border-radius: 24px;
   box-shadow: 0 12px 32px rgba(24, 51, 89, 0.16);
-  background: linear-gradient(135deg, #FFFFFF 0%, #F4F8FC 100%);
+  background: #EAF3FB;
   padding: 18px 0;
   mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
   -webkit-mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
@@ -1498,7 +1498,7 @@ body.unopened-locked {
 }
 
 .dresscode-detailed-card {
-  background: linear-gradient(135deg, #FFFFFF 0%, #F4F8FC 100%);
+  background: #EAF3FB;
   border: 1.5px solid var(--gold-primary);
   border-radius: 20px;
   padding: 24px 20px;
